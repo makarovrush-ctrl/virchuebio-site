@@ -1,6 +1,6 @@
 {
   "schema": "virchuebio-site-release/2",
-  "publishedAt": "2026-11-12T08:08:16.846Z",
+  "publishedAt": "2026-11-12T08:48:39.946Z",
   "mode": "public",
   "domain": "www.virchuebio.com",
   "forgeflowBuild": {
@@ -110,32 +110,36 @@
       "bytes": 74435
     },
     "community.html": {
-      "sha256": "3c1e5d31bb771d86b2d510911a4724974c153f1b71185f50f0f9c14f383d1582",
-      "bytes": 5580
+      "sha256": "c1f1bbd52e40ecf9e54e86f33d578a0ca5702be766bf65f518732f1076365516",
+      "bytes": 5579
     },
     "contact.html": {
-      "sha256": "24d2871112faf869e9756a385361d0c0b63ed2f9016177475bdfaab35a67d693",
-      "bytes": 4179
+      "sha256": "1c13185941eb7bf53b4bc762538b205de0e4402629f2240227a902f15191677e",
+      "bytes": 4178
     },
     "favicon.svg": {
       "sha256": "c7734d95757ed800905d78d4b633e233455055796cb327e072ccf587c649d713",
       "bytes": 8082
     },
     "index.html": {
-      "sha256": "9bede4d2e0642aad1bbbefa9536283be2bd54eb2e3702797e3e65f3f0c0201e4",
-      "bytes": 15869
+      "sha256": "2bee26c94c30f5966691576fd2ee01c00e8a3ec1e9e066c57d892dcd460284da",
+      "bytes": 15895
     },
     "privacy.html": {
-      "sha256": "a96c0c51bf45f0673342aa78781d80841dd41beb55f0a531927c47c65c734686",
-      "bytes": 5632
+      "sha256": "4a22958366c2fe3ca195ce0f3bae74af47e74e26636d5d400697de80e238e160",
+      "bytes": 6895
     },
     "robots.txt": {
       "sha256": "17f15a556bbe026640db462476659d39c78639a926c6cc93410b3ce3ad710878",
       "bytes": 39
     },
     "team.html": {
-      "sha256": "2822afdc7c414b2064dff11991d5fad6586ead78201371d0b7c02ef18b4a252b",
-      "bytes": 6204
+      "sha256": "cf411a1f9080d2c23446c7c77d99b19fb5773628b5acde9c750cbe077a2fe694",
+      "bytes": 6203
+    },
+    "terms.html": {
+      "sha256": "258e6bdd0778e8c8a0652f685dce9298a90ccc881ba6393f9b543423ea46a3cd",
+      "bytes": 8716
     }
   },
   "wrapper": "Public pages from pages/. App pages hardened by tools/harden.mjs: method panels and manuscript provenance replaced, code minified, comments removed.",
