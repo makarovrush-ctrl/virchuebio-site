@@ -1,0 +1,101 @@
+{
+  "schema": "virchuebio-site-release/2",
+  "publishedAt": "2026-11-12T04:42:23.057Z",
+  "mode": "public",
+  "domain": "www.virchuebio.com",
+  "forgeflowBuild": {
+    "sourceHashes": {
+      "index.html": "5acefa3cc0dfbddd64ba1b6162def37b07becd178e4a17850b963e3abad5e38d",
+      "vessel-prep.html": "dc57f0db99e6cac49163aa716bf5d98b29a23bac259699f3614059cb5c535f34",
+      "vendor/three-r128.min.js": "9274bbcec8d96168626c732b5d31c775aa8cfb7eaa0599bec0c175908a2c1ce2",
+      "vendor/THREE-r128-LICENSE.txt": "7dddf7c5b8fd10ee654db8857d75d104b5557889aa5a91fc4ca545ea7c07062f",
+      "vendor/three.min.js": "07a95e94084abcb4bcb1adec04fea06606aebf7f797badf45215562a7e439290",
+      "vendor/THREE-LICENSE.txt": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601"
+    }
+  },
+  "served": {
+    ".nojekyll": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "404.html": {
+      "sha256": "10c53a1ed011976753637b09baebb87e1743e54a7309a99710a5163d49d11f85",
+      "bytes": 562
+    },
+    "CNAME": {
+      "sha256": "3e47e0f00befc122fe89357ae646e3274bf9dcf4febfd9f022cdb2bdb9957989",
+      "bytes": 19
+    },
+    "app/index.html": {
+      "sha256": "0d5349e37931cf10a17dbe3601585768cc7974303cd77656e6aeb80adcce5fcb",
+      "bytes": 532206
+    },
+    "app/vendor/THREE-LICENSE.txt": {
+      "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
+      "bytes": 1081
+    },
+    "app/vendor/THREE-r128-LICENSE.txt": {
+      "sha256": "7dddf7c5b8fd10ee654db8857d75d104b5557889aa5a91fc4ca545ea7c07062f",
+      "bytes": 1081
+    },
+    "app/vendor/three-r128.min.js": {
+      "sha256": "9274bbcec8d96168626c732b5d31c775aa8cfb7eaa0599bec0c175908a2c1ce2",
+      "bytes": 603445
+    },
+    "app/vendor/three.min.js": {
+      "sha256": "07a95e94084abcb4bcb1adec04fea06606aebf7f797badf45215562a7e439290",
+      "bytes": 701356
+    },
+    "app/vessel-prep.html": {
+      "sha256": "1a5095dd579f0869bdd29bf211c93706e4a906ba912555527e2736334b83154b",
+      "bytes": 111400
+    },
+    "assets/site.css": {
+      "sha256": "721d5e738b2c808e0d1990ee8728353f711996b2b562d23653fcfa4912780f6e",
+      "bytes": 9350
+    },
+    "assets/team/allan-sun.jpg": {
+      "sha256": "d27e13c60fd22d393e1bb6f669433b1838ab872c25762e1b0e70fa3300ba5aff",
+      "bytes": 81672
+    },
+    "assets/team/ken-tye-yong.jpg": {
+      "sha256": "dc6e49e7897f51b30351c2141bdeb239ca0be1deb4597d186b8ee056c0d3dd4f",
+      "bytes": 79949
+    },
+    "assets/team/mackenzie-zhuang.jpg": {
+      "sha256": "8707dd40f3a7c8c64f64cd3c711bd1dfadf9366627a85ae4ce2269bf5bd3662d",
+      "bytes": 74435
+    },
+    "community.html": {
+      "sha256": "bf367d13cbfe45a6f07c938c70235e152f372fadcc1ad501beb66d2af4b158fd",
+      "bytes": 4257
+    },
+    "contact.html": {
+      "sha256": "34ffa382ae4924b0ff859ff3b08f6dc47027e2ef134bdb434c75d5bbda430a16",
+      "bytes": 2870
+    },
+    "favicon.svg": {
+      "sha256": "c7734d95757ed800905d78d4b633e233455055796cb327e072ccf587c649d713",
+      "bytes": 8082
+    },
+    "index.html": {
+      "sha256": "644059943fb79459f599860c11025976c377444fbd493ee40ceca3b397d6c3f5",
+      "bytes": 6047
+    },
+    "privacy.html": {
+      "sha256": "552649dc2a3adfffa816aa03bf47a6c228a8144db7e5a0283269ec8bf3924be3",
+      "bytes": 4253
+    },
+    "robots.txt": {
+      "sha256": "17f15a556bbe026640db462476659d39c78639a926c6cc93410b3ce3ad710878",
+      "bytes": 39
+    },
+    "team.html": {
+      "sha256": "555ab199c88cdc6ed0cae698439d3c4de42dc3672889899a4fb82e9bfc03ac8b",
+      "bytes": 6001
+    }
+  },
+  "wrapper": "Public pages from pages/. App pages hardened by tools/harden.mjs: method panels and manuscript provenance replaced, code minified, comments removed.",
+  "scope": "Research beta. Not a medical device. No clinical, diagnostic or patient-risk claims. All geometry and results stay in the visitor's browser.",
+  "note": "Images carry embedded content-credential (C2PA) metadata added when the files were transferred; hashes recorded as served."
+}
