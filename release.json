@@ -1,6 +1,6 @@
 {
   "schema": "virchuebio-site-release/2",
-  "publishedAt": "2026-11-12T22:52:51.020Z",
+  "publishedAt": "2026-11-12T23:49:50.589Z",
   "mode": "public",
   "domain": "www.virchuebio.com",
   "forgeflowBuild": {
@@ -30,8 +30,8 @@
       "bytes": 19
     },
     "app/index.html": {
-      "sha256": "9606035129a9ab5bfc0e1f1af3d61dc6f9a5aa5738e0fccb1d3308e4a62fbcad",
-      "bytes": 532175
+      "sha256": "eaf933578599a51e531064b27459a7b101a50af50939b5a5a690e5ba931259c3",
+      "bytes": 536603
     },
     "app/vendor/THREE-LICENSE.txt": {
       "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
@@ -50,8 +50,8 @@
       "bytes": 701356
     },
     "app/vessel-prep.html": {
-      "sha256": "1a5095dd579f0869bdd29bf211c93706e4a906ba912555527e2736334b83154b",
-      "bytes": 111400
+      "sha256": "8c0f64fe0bb72502585b3daf0049a702ab4e5c690482c287d8f83ca3bc7c835a",
+      "bytes": 114603
     },
     "assets/fonts/FONT-LICENSES.txt": {
       "sha256": "c9971b94056e43c2301a97e13093d8b88e9d6a117058cd7307780b83a98bac4c",
@@ -110,39 +110,38 @@
       "bytes": 74435
     },
     "community.html": {
-      "sha256": "c1f1bbd52e40ecf9e54e86f33d578a0ca5702be766bf65f518732f1076365516",
-      "bytes": 5579
+      "sha256": "79b9b3dde4f6bd11719851972d3d8293ff3372cd29e4fe252a33ad7a4fbc262f",
+      "bytes": 5586
     },
     "contact.html": {
-      "sha256": "1c13185941eb7bf53b4bc762538b205de0e4402629f2240227a902f15191677e",
-      "bytes": 4178
+      "sha256": "866f29a777f23a52d3532e0e218c310e4d0583b00d43414aebbba4360ac0a051",
+      "bytes": 4185
     },
     "favicon.svg": {
       "sha256": "c7734d95757ed800905d78d4b633e233455055796cb327e072ccf587c649d713",
       "bytes": 8082
     },
     "index.html": {
-      "sha256": "75c2b41d0971e725d71add480d7c8dae486ddd2ee3e6037c577b2552ddf7c3d2",
-      "bytes": 17117
+      "sha256": "96a7283c06c1cbc1b7b668282f65084de078dd54805d8f354150ac1459cbf887",
+      "bytes": 17221
     },
     "privacy.html": {
-      "sha256": "4a22958366c2fe3ca195ce0f3bae74af47e74e26636d5d400697de80e238e160",
-      "bytes": 6895
+      "sha256": "299bb9cbc4af1ec19c8f4275763fb92fb81fa69d36ddc501ce4594e9123da49f",
+      "bytes": 6902
     },
     "robots.txt": {
       "sha256": "17f15a556bbe026640db462476659d39c78639a926c6cc93410b3ce3ad710878",
       "bytes": 39
     },
     "team.html": {
-      "sha256": "ab4eac266af1a10f4d480abe91dc32b5444c9643b5804e436cd85a9440f7f7a5",
-      "bytes": 6628
+      "sha256": "7601bd77a650ca76f08e26d52741baf8d3d676e2d357c50246126fd52103a12d",
+      "bytes": 6635
     },
     "terms.html": {
-      "sha256": "258e6bdd0778e8c8a0652f685dce9298a90ccc881ba6393f9b543423ea46a3cd",
-      "bytes": 8716
+      "sha256": "aa7e8a41c9799b0d142637e60089c88bb68525f38174479eff81cc3b13e052c4",
+      "bytes": 8874
     }
   },
   "wrapper": "Public pages from pages/. App pages hardened by tools/harden.mjs: method panels and manuscript provenance replaced, code minified, comments removed.",
-  "scope": "Research beta. Not a medical device. No clinical, diagnostic or patient-risk claims. All geometry and results stay in the visitor's browser.",
-  "note": "Images carry embedded content-credential (C2PA) metadata added when the files were transferred; hashes recorded as served."
+  "scope": "Research beta. Not a medical device. No clinical, diagnostic or patient-risk claims. All geometry and results stay in the visitor's browser."
 }
