@@ -1,6 +1,6 @@
 {
   "schema": "virchuebio-site-release/2",
-  "publishedAt": "2026-11-16T00:33:22.909Z",
+  "publishedAt": "2026-11-16T22:46:45.407Z",
   "mode": "public",
   "domain": "www.virchuebio.com",
   "forgeflowBuild": {
@@ -16,6 +16,10 @@
   "fgtServer": {
     "mode": "browser"
   },
+  "caseStore": null,
+  "analytics": {
+    "goatcounter": "https://virchuebio.goatcounter.com/count"
+  },
   "served": {
     ".nojekyll": {
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -30,8 +34,8 @@
       "bytes": 19
     },
     "app/index.html": {
-      "sha256": "aa15de2725c55233322dd860bc7b6ab1ef39f3502824bd33aa5eb32496a80a1b",
-      "bytes": 564843
+      "sha256": "2b96cbffa13b06796e738b9122bf3c5c40a6ecb4f35227a9a9e680e3a96f7a3e",
+      "bytes": 572959
     },
     "app/vendor/THREE-LICENSE.txt": {
       "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
@@ -50,8 +54,8 @@
       "bytes": 701356
     },
     "app/vessel-prep.html": {
-      "sha256": "8c0f64fe0bb72502585b3daf0049a702ab4e5c690482c287d8f83ca3bc7c835a",
-      "bytes": 114603
+      "sha256": "c65a79f6a0215cbe4f79cc08093881a8bfa558cdd1f7232912b3492ad28af3de",
+      "bytes": 114720
     },
     "assets/fonts/FONT-LICENSES.txt": {
       "sha256": "c9971b94056e43c2301a97e13093d8b88e9d6a117058cd7307780b83a98bac4c",
@@ -110,36 +114,36 @@
       "bytes": 74435
     },
     "community.html": {
-      "sha256": "79b9b3dde4f6bd11719851972d3d8293ff3372cd29e4fe252a33ad7a4fbc262f",
-      "bytes": 5586
+      "sha256": "afbe7cb19e50aa4d73eb34d18b663fe66d2012b3c9c63f1fc45fb44b1d1fae09",
+      "bytes": 5703
     },
     "contact.html": {
-      "sha256": "866f29a777f23a52d3532e0e218c310e4d0583b00d43414aebbba4360ac0a051",
-      "bytes": 4185
+      "sha256": "65032556655bc2ed6e2cd5b30927d89e1b724c9925eb66bb7dcac5d774f339a1",
+      "bytes": 4302
     },
     "favicon.svg": {
       "sha256": "c7734d95757ed800905d78d4b633e233455055796cb327e072ccf587c649d713",
       "bytes": 8082
     },
     "index.html": {
-      "sha256": "cbc42339d5984b551187cbf868d9d968ffbcbc788b669bbdfbaa2d08a4e4672e",
-      "bytes": 17388
+      "sha256": "d2a1c46d8118d13f568da2e62b5f3cc719410bb5006db89ca7e5ed2d8764cb56",
+      "bytes": 17505
     },
     "privacy.html": {
-      "sha256": "299bb9cbc4af1ec19c8f4275763fb92fb81fa69d36ddc501ce4594e9123da49f",
-      "bytes": 6902
+      "sha256": "296830a85502bdd197143197487c37fa98243131026df2701ad00ae6025dbff3",
+      "bytes": 7761
     },
     "robots.txt": {
       "sha256": "17f15a556bbe026640db462476659d39c78639a926c6cc93410b3ce3ad710878",
       "bytes": 39
     },
     "team.html": {
-      "sha256": "7601bd77a650ca76f08e26d52741baf8d3d676e2d357c50246126fd52103a12d",
-      "bytes": 6635
+      "sha256": "1ec603fdb7d58816b658f78f8bf926e2b3d66f4de344ef0450f4ebed7e80edef",
+      "bytes": 6752
     },
     "terms.html": {
-      "sha256": "aa7e8a41c9799b0d142637e60089c88bb68525f38174479eff81cc3b13e052c4",
-      "bytes": 8874
+      "sha256": "137b0d71be09a765e804e7e8026d0c51c801758cdd508bc570e239c83cb3bfa1",
+      "bytes": 8991
     }
   },
   "wrapper": "Public pages from pages/. App pages hardened by tools/harden.mjs: method panels and manuscript provenance replaced, code minified, comments removed.",
