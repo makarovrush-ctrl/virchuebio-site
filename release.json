@@ -1,6 +1,6 @@
 {
   "schema": "virchuebio-site-release/2",
-  "publishedAt": "2026-11-16T23:58:28.360Z",
+  "publishedAt": "2026-11-17T21:50:09.108Z",
   "mode": "public",
   "domain": "www.virchuebio.com",
   "forgeflowBuild": {
@@ -93,9 +93,17 @@
       "sha256": "7796998dac1ab02b98c32b6e2babbd56255ff3b4e9681d9c7c608530d9033eb6",
       "bytes": 21036
     },
+    "assets/getting-started-poster.jpg": {
+      "sha256": "8de3cd08d692f366a4817b49f13a10009f2e828888d5ebb3cfd59f04498e25bb",
+      "bytes": 60020
+    },
+    "assets/getting-started.mp4": {
+      "sha256": "fa277cf9d6f94ad127c715850d2b1380013199b30b8ce60b5b764a4cf5184825",
+      "bytes": 7065657
+    },
     "assets/site.css": {
-      "sha256": "78d3eb4fc7263875d5cac6b12a35e9cb501867a7cdb7e7f505646c46925bcc6c",
-      "bytes": 24398
+      "sha256": "539e0b2feb7f06595de7c2e4ac889e388df41faf4913b5c102ada1fefc24a6cc",
+      "bytes": 26370
     },
     "assets/story.js": {
       "sha256": "29f258b860c7f54d23259fb412ae9cbd89f64d6d1e9b8a20871c5d4ead1f9e3e",
@@ -114,36 +122,36 @@
       "bytes": 74435
     },
     "community.html": {
-      "sha256": "afbe7cb19e50aa4d73eb34d18b663fe66d2012b3c9c63f1fc45fb44b1d1fae09",
-      "bytes": 5703
+      "sha256": "5d7c149088b2d1ec66f2903491204adeb3d3652bebbe057bca52c6d74ac92b4e",
+      "bytes": 5766
     },
     "contact.html": {
-      "sha256": "65032556655bc2ed6e2cd5b30927d89e1b724c9925eb66bb7dcac5d774f339a1",
-      "bytes": 4302
+      "sha256": "aa88174f06ac72fdf4e9d3a76f65b1e149985f74a2d42d44e90063310836125a",
+      "bytes": 4365
     },
     "favicon.svg": {
       "sha256": "c7734d95757ed800905d78d4b633e233455055796cb327e072ccf587c649d713",
       "bytes": 8082
     },
     "index.html": {
-      "sha256": "d2a1c46d8118d13f568da2e62b5f3cc719410bb5006db89ca7e5ed2d8764cb56",
-      "bytes": 17505
+      "sha256": "f8557ad1db651112bf568dcfc9c63ac55749a97cf30cb18c2806e7a5e59ed85b",
+      "bytes": 20869
     },
     "privacy.html": {
-      "sha256": "2670b0994d337372b6833d42d116f0928b54eb592d64437dac57c0a5a5e431bf",
-      "bytes": 7911
+      "sha256": "ba9771b8f9d2553099fab64504d808f1276f213e4a95ee47fa6f333a17751d1f",
+      "bytes": 7974
     },
     "robots.txt": {
       "sha256": "17f15a556bbe026640db462476659d39c78639a926c6cc93410b3ce3ad710878",
       "bytes": 39
     },
     "team.html": {
-      "sha256": "1ec603fdb7d58816b658f78f8bf926e2b3d66f4de344ef0450f4ebed7e80edef",
-      "bytes": 6752
+      "sha256": "bfb375383aa4b932e6a749ba88fe96d230d77c72f13c02c7a8357415e0fbd0a1",
+      "bytes": 6815
     },
     "terms.html": {
-      "sha256": "1dac41bbdc448df9e3b421974e6bbd0f5543a7a290a24812d1a4a4a21e4d40c4",
-      "bytes": 9291
+      "sha256": "0ce36fe9c72d57d9a13faa67f3857d55be03037de0109f5f30dd5b2ee6fd6ddd",
+      "bytes": 9354
     }
   },
   "wrapper": "Public pages from pages/. App pages hardened by tools/harden.mjs: method panels and manuscript provenance replaced, code minified, comments removed.",
