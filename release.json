@@ -1,6 +1,6 @@
 {
   "schema": "virchuebio-site-release/2",
-  "publishedAt": "2026-11-16T23:45:36.467Z",
+  "publishedAt": "2026-11-16T23:58:28.360Z",
   "mode": "public",
   "domain": "www.virchuebio.com",
   "forgeflowBuild": {
@@ -34,8 +34,8 @@
       "bytes": 19
     },
     "app/index.html": {
-      "sha256": "2b96cbffa13b06796e738b9122bf3c5c40a6ecb4f35227a9a9e680e3a96f7a3e",
-      "bytes": 572959
+      "sha256": "0f8538a109d7d16064f1a9e1b88ea07b2e910c805d739cde1746a290d1ab352a",
+      "bytes": 573236
     },
     "app/vendor/THREE-LICENSE.txt": {
       "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
