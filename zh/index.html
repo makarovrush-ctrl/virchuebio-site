@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="zh-Hans"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0a1a1e">
+<meta name="description" content="VirChue Bio：免费的研究测试版平台，用于准备血管几何模型、模拟血流，并探索与血栓相关的血管壁受力。">
+<title>VirChue Bio · 血流与血栓研究平台</title><link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../assets/fonts/instrument-serif-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/site.css"><link rel="alternate" hreflang="en" href="https://www.virchuebio.com/index.html"><link rel="alternate" hreflang="zh-Hans" href="https://www.virchuebio.com/zh/index.html"><link rel="alternate" hreflang="x-default" href="https://www.virchuebio.com/index.html"></head>
+<body>
+<a class="skip-link" href="#main">跳到正文</a>
+<header class="site-header"><div class="wrap"><a class="brand" href="./index.html" aria-label="VirChue Bio 首页"><svg viewBox="0 0 36 36" aria-hidden="true"><path d="M18 33V20M18 20 7 6M18 20 29 6"/><circle cx="18" cy="20" r="3.6"/></svg><span class="brand-word">VirChue<small>BIO</small></span></a>
+<nav aria-label="主导航"><a href="./index.html" aria-current="page">首页</a><a href="./team.html">团队</a><a href="./community.html">社区</a><a href="./contact.html">联系我们</a><a class="nav-cta" href="../app/index.html">打开 VirChue Bio X</a></nav><div class="lang-switch" role="group" aria-label="语言"><a href="../index.html" lang="en" hreflang="en">EN</a><a href="./index.html" lang="zh-Hans" aria-current="true">中文</a></div></div></header>
+<main id="main">
+<section class="hero on-dark" aria-labelledby="page-title"><div class="wrap">
+<div>
+<p class="eyebrow"><i class="dot" aria-hidden="true"></i>VirChue Bio X v1.0 <span>免费研究测试版 · 2026 年 11 月</span></p>
+<h1 id="page-title">从血管几何，到<em>血栓洞察。</em></h1>
+<p class="lead">准备血管模型，模拟其中的血流，并找出血管壁上最容易受到促凝血作用力的部位。VirChue Bio X 是悉尼大学团队开发的研究平台，可在浏览器中免费使用，其中的快速 CFD 模块 ForgeFlow 负责求解血流。</p>
+<div class="actions"><a class="button primary" href="../app/vessel-prep.html">准备血管模型 <span class="arrow" aria-hidden="true">→</span></a><a class="button" href="../app/index.html#demo">▶ 运行演示</a><a class="button" href="../app/index.html">打开 VirChue Bio X</a></div>
+<p class="note">第一次使用？演示会在大约一分钟内，带一个内置示例从几何模型一路算到血栓数 Θ。使用自己的 STL 文件时，请从血管准备开始。请在台式机或笔记本电脑上使用 Chrome 或 Edge 浏览器。<a href="#start">观看入门视频</a>。平台界面目前为英文。</p>
+</div>
+<figure class="flow-figure" role="img" aria-label="示意图：血液流经分叉血管，分叉处的血管壁受力最大。">
+<svg viewBox="-10 0 580 460" aria-hidden="true">
+<defs>
+<linearGradient id="flowGrad" x1="0" x2="560" y1="0" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1f6f78"/><stop offset=".5" stop-color="#3cc7b3"/><stop offset="1" stop-color="#8fe3ff"/></linearGradient>
+<linearGradient id="hotGrad" x1="300" x2="360" y1="0" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff6a5c"/><stop offset=".55" stop-color="#ffd28a"/><stop offset="1" stop-color="#3cc7b3" stop-opacity="0"/></linearGradient>
+<filter id="glow" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="soft" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="3"/></filter>
+<linearGradient id="fadeGrad" x1="0" x2="560" y1="0" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".13" stop-color="#fff"/><stop offset=".9" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity=".35"/></linearGradient>
+<mask id="fade" maskUnits="userSpaceOnUse" x="-10" y="0" width="580" height="460"><rect x="-10" y="0" width="580" height="460" fill="url(#fadeGrad)"/></mask>
+</defs>
+<g mask="url(#fade)">
+<path class="lumen" d="M0,172 L200,172 C290,172 330,140 380,105 C430,70 490,40 560,28 L560,112 C480,140 400,200 330,221 Q318,230 330,239 C400,260 480,320 560,348 L560,432 C490,420 430,390 380,355 C330,320 290,288 200,288 L0,288 Z"/>
+<g>
+<path class="stream" d="M0.0,180.1 L200.0,180.1 C287.2,180.1 325.8,152.5 373.0,121.2 C425.8,88.2 488.6,54.0 560.0,39.8"/>
+<path class="stream" d="M0.0,279.9 L200.0,279.9 C287.2,279.9 325.8,307.5 373.0,338.8 C425.8,371.8 488.6,406.0 560.0,420.2"/>
+<path class="stream" d="M0.0,192.9 L200.0,192.9 C282.8,192.9 319.2,172.0 362.0,146.8 C419.2,116.8 486.4,76.0 560.0,58.2"/>
+<path class="stream" d="M0.0,267.1 L200.0,267.1 C282.8,267.1 319.2,288.0 362.0,313.2 C419.2,343.2 486.4,384.0 560.0,401.8"/>
+<path class="stream" d="M0.0,205.6 L200.0,205.6 C278.4,205.6 312.6,191.6 351.0,172.3 C412.6,145.4 484.2,98.0 560.0,76.7"/>
+<path class="stream" d="M0.0,254.4 L200.0,254.4 C278.4,254.4 312.6,268.4 351.0,287.7 C412.6,314.6 484.2,362.0 560.0,383.3"/>
+<path class="stream" d="M0.0,218.4 L200.0,218.4 C274.0,218.4 306.0,211.2 340.0,197.8 C406.0,174.0 482.0,120.0 560.0,95.2"/>
+<path class="stream" d="M0.0,241.6 L200.0,241.6 C274.0,241.6 306.0,248.8 340.0,262.2 C406.0,286.0 482.0,340.0 560.0,364.8"/>
+</g>
+<path class="wall-glow" d="M0,172 L200,172 C290,172 330,140 380,105 C430,70 490,40 560,28"/>
+<path class="wall-glow" d="M0,288 L200,288 C290,288 330,320 380,355 C430,390 490,420 560,432"/>
+<path class="wall-glow" d="M560,112 C480,140 400,200 330,221 Q318,230 330,239 C400,260 480,320 560,348"/>
+<path class="wall" d="M0,172 L200,172 C290,172 330,140 380,105 C430,70 490,40 560,28"/>
+<path class="wall" d="M0,288 L200,288 C290,288 330,320 380,355 C430,390 490,420 560,432"/>
+<path class="wall" d="M560,112 C480,140 400,200 330,221 Q318,230 330,239 C400,260 480,320 560,348"/>
+</g>
+<path class="hot-wall" d="M362,209 C350,214 338,218 330,221 Q318,230 330,239 C338,242 350,246 362,251"/>
+<circle class="hotspot" cx="324" cy="230" r="6"/>
+<path class="leader" d="M336,230 H392"/>
+<text class="fig-label hot" x="398" y="234">壁面受力峰值</text>
+<text class="fig-label" x="40" y="160">入口</text>
+<text class="fig-label" x="478" y="18">出口 A</text>
+<text class="fig-label" x="478" y="454">出口 B</text>
+</svg>
+<figcaption><span>示意图 · 分叉血管中的血流</span><span class="legend">壁面受力 <i></i></span></figcaption>
+</figure>
+</div></section>
+
+<section class="scope" aria-label="开始之前"><div class="wrap"><ul>
+<li><span class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.4-3 7.6-7 9-4-1.4-7-4.6-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><span><strong>仅供研究使用</strong>探索性的模型结果，不是医疗器械，也不是临床风险评分。</span></li>
+<li><span class="ico"><svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 14h6M9 17h4"/></svg></span><span><strong>文件留在您的电脑上</strong>几何模型和模拟都在您的浏览器中处理，不会上传任何内容。</span></li>
+<li><span class="ico"><svg viewBox="0 0 24 24"><path d="M4 15a8 8 0 1 1 16 0"/><path d="M12 15l4-5"/><circle cx="12" cy="15" r="1.2"/></svg></span><span><strong>数值状态一目了然</strong>每个结果旁都会显示网格质量和流场收敛情况。</span></li>
+</ul></div></section>
+
+<section class="section" aria-labelledby="what-title"><div class="wrap">
+<div class="section-head"><div><p class="eyebrow">平台功能</p><h2 id="what-title">一条流程：从几何模型到壁面受力</h2></div><p>分为三个阶段，每个阶段都有各自的检查，让您在分享结果之前就了解它的可信程度。</p></div>
+<div class="pillars">
+<article class="pillar"><span class="num">01 — 几何</span><svg viewBox="0 0 56 56" aria-hidden="true"><path d="M6 20h16c8 0 12-6 20-10M6 36h16c8 0 12 6 20 10M44 22c-6 1-10 4-13 6 3 2 7 5 13 6"/><path d="M6 15v26M44 5v10M44 41v10"/></svg><h3>准备血管</h3><p>导入流体管腔 STL 或带命名端盖的管腔，确认单位，检查每个开口，并指定入口和出口。</p></article>
+<article class="pillar"><span class="num">02 — 血流</span><svg viewBox="0 0 56 56" aria-hidden="true"><path d="M6 18c10 0 14 4 22 4s12-4 22-4M6 28h40M6 38c10 0 14-4 22-4s12 4 22 4"/><path d="M42 24l6 4-6 4"/></svg><h3>模拟血流</h3><p>设置流量和血液属性，按照针对患者血管的建议生成网格，然后运行血流模拟，实时查看进度和收敛检查。</p></article>
+<article class="pillar"><span class="num">03 — 血栓</span><svg viewBox="0 0 56 56" aria-hidden="true"><path d="M6 42c10-14 20-22 44-26"/><path d="M6 50c12-12 24-18 44-20" opacity=".45"/><circle cx="29" cy="27" r="10" opacity=".35"/><circle class="hot" cx="29" cy="27" r="3.5"/></svg><h3>探索血栓分布图</h3><p>在模拟血流的基础上计算团队提出的、基于力学的血栓指标，在三维视图中查看，并导出场数据、图表和病例记录。</p></article>
+</div></div></section>
+
+<section class="section" id="start" aria-labelledby="start-title"><div class="wrap">
+<div class="section-head"><div><p class="eyebrow">从这里开始</p><h2 id="start-title">三个案例，从<em>一分钟</em>到 45 分钟</h2></div><p>刚接触这个平台？请按顺序完成三个内置案例。每个案例都比上一个耗时更长，这样在运行自己的血管模型之前，您就知道大概需要多久。</p></div>
+<figure class="learn-video"><video controls preload="none" playsinline poster="../assets/getting-started-poster.jpg" width="1920" height="1080" aria-label="入门视频（无声音）：屏幕上演示三个入门案例，配有英文字幕和各自的运行时间。"><source src="../assets/getting-started.mp4" type="video/mp4"><a href="../assets/getting-started.mp4">下载入门视频（MP4）</a></video><figcaption><span>入门 · 2 分 46 秒 · 无声音，英文字幕</span><span>使用 VirChue Bio X v1.0 录制</span></figcaption></figure>
+<ol class="levels">
+<li class="level" data-level="1"><span class="pill">1 · 简单</span><h3>运行演示</h3><p>一键完成。演示使用一根有 50% 狭窄的管道，在粗网格上从几何模型一直算到血栓数 Θ，并逐步讲解每一步。</p><dl><div><dt>网格单元</dt><dd>6,638</dd></div><div><dt>迭代次数</dt><dd>607</dd></div><div><dt>运行时间</dt><dd class="time">约 1 分钟</dd></div></dl><a class="text-link" href="../app/index.html#demo">运行演示 →</a></li>
+<li class="level" data-level="2"><span class="pill">2 · 中等</span><h3>同一根管道，逐步操作</h3><p>每一步都自己动手。在面板 1 中选择 <strong>Pipe stenosis</strong>，在面板 2 中把目标网格单元数设为 30,000，生成网格后按 <strong>Run</strong>。然后在 Θ 面板中选择 <strong>Use illustrative scenario</strong>。</p><dl><div><dt>网格单元</dt><dd>23,959</dd></div><div><dt>迭代次数</dt><dd>1,126</dd></div><div><dt>运行时间</dt><dd class="time">约 4 分钟</dd></div></dl><a class="text-link" href="../app/index.html">打开 VirChue Bio X →</a></li>
+<li class="level" data-level="3"><span class="pill">3 · 困难</span><h3>分叉动脉</h3><p>在面板 1 中打开 <strong>Blood-vessel library</strong>，选择 <strong>Carotid bifurcation</strong>，保留建议的网格并按 <strong>Run</strong>。分叉血管的计算量要大得多：这次运行在达到收敛容差之前，就停在了默认的 2,000 次迭代上限，因此应用将 Θ 标记为探索性结果。您不必等到上限：随时可以按 <strong>Stop</strong> 查看目前的结果，再按 <strong>Run</strong> 继续计算。</p><dl><div><dt>网格单元</dt><dd>83,845</dd></div><div><dt>迭代次数</dt><dd>2,000（上限）</dd></div><div><dt>运行时间</dt><dd class="time">约 45 分钟</dd></div></dl><a class="text-link" href="../app/index.html">打开 VirChue Bio X →</a></li>
+</ol>
+<p class="learn-next">之后就可以使用自己的血管了：从 STL 文件<a href="../app/vessel-prep.html">准备血管模型</a>，然后按同样的步骤操作。</p>
+<p class="learn-note">以上运行时间是 2026 年 11 月在一台双核 2.1 GHz 云计算机上用 Chrome 测得的，仅供参考：您的电脑可能更快或更慢，网格越细耗时越长。每次运行结束时，应用会显示所用时间。运行期间请让该标签页保持在前台，因为浏览器会降低后台标签页的运行速度。</p>
+</div></section>
+
+<section class="section" aria-labelledby="story-title"><div class="wrap">
+<div class="section-head"><div><p class="eyebrow">工作原理</p><h2 id="story-title">从患者血管到<em>易栓热点</em></h2></div><p>ForgeFlow 模拟血液在血管中的流动。FGT 模型把这些流场结果转化为血栓数 Θ 等指标，显示在您设定的条件下血栓可能从哪里开始形成。</p></div>
+<div class="story on-dark" data-story data-act="0">
+<div class="st-stage">
+<canvas width="1000" height="520" role="img" aria-label="动画：一条带狭窄的患者分叉动脉。血液流入，ForgeFlow 求解流场，FGT 模型在血管壁上绘制血栓数分布，并标出狭窄处和分叉顶端的热点。"></canvas>
+<div class="st-hud"><p class="st-kicker"><span class="st-num">01</span> / 04</p><p class="st-title">患者血管几何</p><p class="st-sub">从影像中分割出的带狭窄的分叉动脉</p></div>
+<p class="st-read" aria-hidden="true">vessel.stl</p>
+</div>
+<div class="st-bar"><ol class="st-chapters"><li><button type="button" data-act="0" aria-current="step"><span class="k">01</span>几何<i aria-hidden="true"></i></button></li><li><button type="button" data-act="1" aria-current="false"><span class="k">02</span>血流<i aria-hidden="true"></i></button></li><li><button type="button" data-act="2" aria-current="false"><span class="k">03</span>快速 CFD<i aria-hidden="true"></i></button></li><li><button type="button" data-act="3" aria-current="false"><span class="k">04</span>FGT · Θ<i aria-hidden="true"></i></button></li></ol><button type="button" class="st-toggle" aria-pressed="false"><span class="i-pause" aria-hidden="true">❚❚</span><span class="i-play" aria-hidden="true">▶</span><span class="lbl">暂停</span></button></div>
+<p class="st-live" aria-live="polite"></p>
+</div>
+<p class="st-foot">示意图：其中的血管、血流和 Θ 数值仅作演示。FGT 结果是依赖输入条件的探索性模型输出，不是临床预测。</p>
+<ol class="acts"><li data-act-card="0" class="active"><span class="n">01</span><h3>患者血管几何</h3><p>从患者的血管开始：一个从 CT 或 MRI 中分割得到的流体管腔 STL，并在血管准备时为入口和出口命名。</p></li><li data-act-card="1"><span class="n">02</span><h3>血液流入</h3><p>设置入流和血液属性。血液进入血管，在狭窄处加速，并在其后减速，形成回流。</p></li><li data-act-card="2"><span class="n">03</span><h3>ForgeFlow 快速 CFD</h3><p>ForgeFlow 为血管生成网格并求解血流，运行时显示进度和收敛情况。</p></li><li data-act-card="3"><span class="n">04</span><h3>血栓数 Θ 等 FGT 指标</h3><p>流场结果输入 FGT 模型，模型在血管壁上绘制血栓数 Θ 等指标的分布，并把高于参考值 Θ = 1 的部位标记为在给定条件下可能形成血栓的部位。</p></li></ol>
+<div class="app-steps">
+<div class="app-steps-head"><div><p class="eyebrow">在应用中</p><h3>用六个步骤分析您自己的案例</h3></div><div class="actions"><a class="button primary" href="../app/vessel-prep.html">从第 1 步开始 <span class="arrow" aria-hidden="true">→</span></a><a class="button" href="../app/index.html#demo">▶ 运行演示</a></div></div>
+<ol><li><span class="n">01</span><div><h4>载入流体管腔</h4><p>把 STL、带命名端盖 STL 的管腔或其所在文件夹拖入血管准备页面，然后确认单位。</p></div></li><li><span class="n">02</span><div><h4>检查每个开口</h4><p>检查识别出的开口，指定入口或出口，然后选择 <strong>Use in ForgeFlow</strong>。</p></div></li><li><span class="n">03</span><div><h4>设置流动参数</h4><p>以流量、平均流速或剪切率输入入口流动条件，并设置密度、黏度和边界条件。</p></div></li><li><span class="n">04</span><div><h4>生成网格</h4><p>按照网格建议操作，并检查几何模型和开口。</p></div></li><li><span class="n">05</span><div><h4>运行并检查血流</h4><p>观察进度和收敛情况；未收敛的流场会明确标记为探索性结果。</p></div></li><li><span class="n">06</span><div><h4>绘制血栓数 Θ</h4><p>在第一个结果面板中选择 Θ 的输入参数。Θ 在血管壁上计算并以三维显示；可以保存报告和壁面数值。</p></div></li></ol>
+</div>
+</div></section>
+<script src="../assets/story.js" defer></script>
+
+
+<section class="section science" aria-labelledby="science-title"><div class="wrap"><div class="paper">
+<div><p class="eyebrow">科学原理</p><h2 id="science-title">基于<em>力门控血栓理论</em></h2><p>FGT（Force-Gated Thrombosis，力门控血栓）是我们提出的理论，解释血流产生的作用力如何引发血栓。它把血栓的起始看作一种由力“门控”的转变，并定义了一个无量纲的血栓数 Θ，用来区分稳定的血流和血栓生长。本平台把这一理论应用于患者个体化的血管。</p></div>
+<div class="paper-card"><span class="tag">预印本</span><p class="paper-cite"><span class="paper-authors">Liu X, Chen Y, Zhuang MS, Vigolo D, Yong K-T.</span> <a href="https://doi.org/10.64898/2026.05.17.725779" target="_blank" rel="noopener noreferrer">Force-Gated Thrombosis (FGT): A Non-Equilibrium Mechanical Theory of Shear-Induced Blood Clot Initiation</a>. <em>bioRxiv</em>, 2026. doi:10.64898/2026.05.17.725779</p><p class="paper-note">发表使用 VirChue Bio 得到的结果时，请引用这篇论文。</p><a class="button" href="https://doi.org/10.64898/2026.05.17.725779" target="_blank" rel="noopener noreferrer">阅读论文 <span class="arrow" aria-hidden="true">↗</span></a></div>
+</div></div></section>
+
+<section class="section" aria-labelledby="meaning-title"><div class="wrap"><div class="meaning">
+<div><span class="tag">仅供研究使用</span><h2 id="meaning-title">了解结果的含义</h2><p>血栓分布图是在您输入的条件下得到的探索性模型结果，不是经过校准的患者风险估计，也不是对血栓将会形成的预测；本平台也不是医疗器械。</p><p><a href="../terms.html">使用条款（英文）</a> · <a href="../privacy.html">隐私政策（英文）</a></p></div>
+<ul class="facts">
+<li><strong>分阶段检查，分别显示</strong>导入、网格划分、流场收敛和血栓计算会作为不同阶段分别报告。</li>
+<li><strong>您的结果，您的文件</strong>导出的结果和反馈都以文件形式保存在您的电脑上，不会自动发送任何内容。</li>
+<li><strong>保留背景信息</strong>分享结果时，请同时附上单位、边界条件、参数和收敛状态。</li>
+</ul>
+</div></div></section>
+
+<section class="cta-band on-dark" aria-labelledby="cta-title"><div class="wrap">
+<div><h2 id="cta-title">有问题、想法或想讨论的案例？</h2><p>加入 VirChue Bio 社区提问、报告问题和建议新功能，或联系团队洽谈合作。</p></div>
+<div class="actions"><a class="button primary" href="./community.html">加入社区 <span class="arrow" aria-hidden="true">→</span></a><a class="button" href="./contact.html">联系团队</a></div>
+</div></section>
+</main>
+<footer class="site-footer"><div class="wrap">
+<div class="about"><a class="brand" href="./index.html" aria-label="VirChue Bio 首页"><svg viewBox="0 0 36 36" aria-hidden="true"><path d="M18 33V20M18 20 7 6M18 20 29 6"/><circle cx="18" cy="20" r="3.6"/></svg><span class="brand-word">VirChue<small>BIO</small></span></a><p>悉尼大学团队开发的血流与血栓研究工具。</p></div>
+<div><h4>平台</h4><ul><li><a href="../app/vessel-prep.html">准备血管模型</a></li><li><a href="../app/index.html">打开 VirChue Bio X v1.0</a></li><li><a href="./index.html#start">入门视频</a></li></ul></div>
+<div><h4>团队与社区</h4><ul><li><a href="./team.html">团队</a></li><li><a href="./community.html">社区论坛</a></li><li><a href="./contact.html">联系我们</a></li></ul></div>
+<div><h4>法律信息</h4><ul><li><a href="../privacy.html">隐私政策（英文）</a></li><li><a href="../terms.html">使用条款（英文）</a></li></ul></div>
+<div class="base"><span>© 2026 VirChue Bio</span><span>仅供研究使用 · 非医疗器械</span></div>
+</div></footer>
+<script data-goatcounter="https://virchuebio.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body></html>
