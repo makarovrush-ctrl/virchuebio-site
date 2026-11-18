@@ -1,4 +1,4 @@
-// VirChue Bio home page: "How it works" story animation (canvas, no dependencies).
+// VirchueBio home page: "How it works" story animation (canvas, no dependencies).
 // Four acts: patient geometry -> blood flows in -> rapid CFD -> FGT Thrombosis Number map.
 // Schematic illustration only: geometry, speeds and Θ values are made up for the picture.
 (() => {

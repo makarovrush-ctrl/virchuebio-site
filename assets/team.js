@@ -1,4 +1,4 @@
-// VirChue Bio team page: on wide screens the five team cards sit in one row and long bios are
+// VirchueBio team page: on wide screens the five team cards sit in one row and long bios are
 // shortened to eight lines with a "Read more" button. Without this script every bio is shown in full.
 (() => {
   'use strict';

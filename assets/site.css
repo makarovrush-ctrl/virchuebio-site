@@ -1,4 +1,4 @@
-/* VirChue Bio — site styles. Fonts are self-hosted (SIL OFL; see fonts/FONT-LICENSES.txt). */
+/* VirchueBio — site styles. Fonts are self-hosted (SIL OFL; see fonts/FONT-LICENSES.txt). */
 @font-face{font-family:"Instrument Serif";src:url(fonts/instrument-serif-latin-400-normal.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
 @font-face{font-family:"Instrument Serif";src:url(fonts/instrument-serif-latin-400-italic.woff2) format("woff2");font-weight:400;font-style:italic;font-display:swap}
 @font-face{font-family:"IBM Plex Sans";src:url(fonts/ibm-plex-sans-latin-400-normal.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
@@ -46,7 +46,7 @@ em{font-style:italic}
 .brand svg{width:30px;height:30px;stroke:var(--teal-bright);stroke-width:2.4;fill:none;stroke-linecap:round}
 .brand svg circle{fill:var(--night);stroke:var(--crimson-bright)}
 .brand-word{font:400 27px/1 var(--serif);letter-spacing:.005em}
-.brand-word small{font:500 11px/1 var(--mono);letter-spacing:.2em;color:var(--teal-bright);margin-left:7px;vertical-align:4px}
+.brand-word small{font:inherit;letter-spacing:inherit;color:var(--teal-bright);margin:0;vertical-align:baseline}
 .site-header nav{display:flex;align-items:center;gap:28px;font-size:14.5px}
 .site-header nav a{color:var(--night-text);text-decoration:none;position:relative;padding:6px 0}
 .site-header nav a:hover{color:#fff}
@@ -65,11 +65,11 @@ html:lang(zh-Hans) body{line-height:1.75}
 html:lang(zh-Hans) em{font-style:normal}
 html:lang(zh-Hans) .hero .note,html:lang(zh-Hans) .learn-note{font-family:var(--sans)}
 html:lang(zh-Hans) h1,html:lang(zh-Hans) h2{letter-spacing:.01em;line-height:1.25}
-/* Chinese pages: the Chinese name above the VirChue BIO wordmark */
+/* Chinese pages: the Chinese name above the VirchueBio wordmark */
 .brand-word.brand-zh{display:flex;flex-direction:column;align-items:flex-start;gap:5px;line-height:1}
 .brand-zh .zh-name{font:600 19px/1 var(--sans);letter-spacing:.12em;color:#fff}
 .brand-zh .en-name{font:400 16px/1 "Instrument Serif",Georgia,serif;letter-spacing:.01em;color:var(--night-text)}
-.brand-zh .en-name small{font-size:8.5px;margin-left:5px;vertical-align:2px}
+.brand-zh .en-name small{font:inherit;margin:0;vertical-align:baseline}
 
 /* Buttons */
 .actions{display:flex;flex-wrap:wrap;gap:12px;margin:30px 0 14px}
@@ -220,6 +220,9 @@ html:lang(zh-Hans) h1,html:lang(zh-Hans) h2{letter-spacing:.01em;line-height:1.2
 .affil{font-size:14px;color:var(--muted);border-top:1px solid var(--line);margin:16px 0 14px;padding-top:14px}
 .bio{font-size:15px;color:var(--ink-2);line-height:1.7}
 .links{display:flex;flex-wrap:wrap;gap:16px;font:500 13px/1 var(--mono);letter-spacing:.03em}
+.person .ack{margin:2px 0 18px;padding:12px 0 0;border-top:1px dashed var(--line-2);font:italic 400 15.5px/1.45 var(--serif);color:var(--muted)}
+.person .ack span{display:block;margin-bottom:5px;font:500 10.5px/1.4 var(--mono);font-style:normal;letter-spacing:.12em;text-transform:uppercase;color:var(--teal)}
+html:lang(zh-Hans) .person .ack{font-style:normal;font-size:13.5px;line-height:1.7}
 .links a{text-decoration:none;border-bottom:1px solid rgba(11,122,112,.35);padding-bottom:3px}
 .links a:hover{border-color:var(--teal)}
 .bio-more{display:none;align-self:flex-start;background:none;border:0;padding:0;margin:-2px 0 16px;font:500 12px/1.4 var(--mono);letter-spacing:.03em;color:var(--teal);cursor:pointer;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(11,122,112,.4)}
@@ -237,6 +240,7 @@ html:lang(zh-Hans) h1,html:lang(zh-Hans) h2{letter-spacing:.01em;line-height:1.2
   .person .bio{font-size:14px;line-height:1.65}
   .person .links{gap:12px;font-size:12px;margin-top:auto}
   .team-grid.can-clamp .person .bio{flex:none;margin-bottom:12px}
+  .person .ack{font-size:14.5px}
   .team-grid.can-clamp .person:not(.open) .bio{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:8;line-clamp:8;overflow:hidden}
   .team-grid.can-clamp .person.has-more .bio-more{display:inline-block}
 }
