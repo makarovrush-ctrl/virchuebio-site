@@ -12,13 +12,26 @@
   const numEl = root.querySelector('.st-num'), titleEl = root.querySelector('.st-title'), subEl = root.querySelector('.st-sub');
   const readEl = root.querySelector('.st-read'), liveEl = root.querySelector('.st-live'), toggle = root.querySelector('.st-toggle');
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // The Chinese pages (lang="zh-Hans") show the animation's words in Chinese.
+  const ZH = /^zh/i.test(document.documentElement.lang);
+  const ZH_TEXT = {
+    'Patient geometry': '患者血管几何', 'A branching artery with a narrowing, segmented from a scan': '从影像中分割出的带狭窄的分叉动脉',
+    'Blood flows in': '血液流入', 'Pulsatile inflow · a fast jet through the narrowing · slow recirculation behind it': '脉动入流 · 狭窄处形成高速射流 · 其后出现缓慢回流',
+    'Rapid CFD with ForgeFlow': 'ForgeFlow 快速 CFD', 'The vessel is meshed and the flow solved, with live convergence checks': '生成血管网格并求解流场，实时检查收敛',
+    'FGT · Thrombosis Number Θ': 'FGT · 血栓数 Θ', 'Flow results → FGT model → Θ mapped over the vessel wall': '流场结果 → FGT 模型 → 血管壁上的 Θ 分布',
+    'Θ > 1 · narrowing': 'Θ > 1 · 狭窄处', 'Θ > 1 · branch tip': 'Θ > 1 · 分叉顶端', 'Thrombosis Number Θ': '血栓数 Θ', '1 · reference': '1 · 参考值',
+    'Inlet': '入口', 'Outlet': '出口', 'Narrowing': '狭窄', 'Pause': '暂停', 'Play': '播放',
+    'inflow · pulsatile · 70 bpm': '入流 · 脉动 · 70 次/分', 'ForgeFlow · converged ✓': 'ForgeFlow · 已收敛 ✓',
+    'FGT · mapping Θ over the wall…': 'FGT · 正在计算壁面 Θ…', 'FGT · 3 spots above Θ = 1': 'FGT · 3 处 Θ 高于 1',
+  };
+  const tr = s => (ZH && ZH_TEXT[s]) || s;
 
   const W = 1000, H = 520;
   const ACTS = [
-    { t0: 0, t1: 4, title: 'Patient geometry', sub: 'A branching artery with a narrowing, segmented from a scan' },
-    { t0: 4, t1: 9, title: 'Blood flows in', sub: 'Pulsatile inflow · a fast jet through the narrowing · slow recirculation behind it' },
-    { t0: 9, t1: 13.5, title: 'Rapid CFD with ForgeFlow', sub: 'The vessel is meshed and the flow solved, with live convergence checks' },
-    { t0: 13.5, t1: 21.5, title: 'FGT · Thrombosis Number Θ', sub: 'Flow results → FGT model → Θ mapped over the vessel wall' },
+    { t0: 0, t1: 4, title: tr('Patient geometry'), sub: tr('A branching artery with a narrowing, segmented from a scan') },
+    { t0: 4, t1: 9, title: tr('Blood flows in'), sub: tr('Pulsatile inflow · a fast jet through the narrowing · slow recirculation behind it') },
+    { t0: 9, t1: 13.5, title: tr('Rapid CFD with ForgeFlow'), sub: tr('The vessel is meshed and the flow solved, with live convergence checks') },
+    { t0: 13.5, t1: 21.5, title: tr('FGT · Thrombosis Number Θ'), sub: tr('Flow results → FGT model → Θ mapped over the vessel wall') },
   ];
   const LOOP = ACTS[3].t1;
   const actOf = t => (t < ACTS[1].t0 ? 0 : t < ACTS[2].t0 ? 1 : t < ACTS[3].t0 ? 2 : 3);
@@ -136,6 +149,7 @@
     ctx.stroke();
   }
   function label(text, x, y, color, align) {
+    text = tr(text);
     ctx.font = `500 ${px(11)}px "IBM Plex Mono", ui-monospace, monospace`;
     ctx.textAlign = align || 'left'; ctx.fillStyle = color; ctx.fillText(text, x, y);
   }
@@ -269,14 +283,14 @@
       root.dataset.act = a;
       chapterBtns.forEach((b, i) => { b.setAttribute('aria-current', i === a ? 'step' : 'false'); b.parentElement.classList.toggle('done', i < a); });
       cards.forEach((c, i) => c.classList.toggle('active', i === a));
-      if (liveEl) liveEl.textContent = `Part ${a + 1} of 4: ${ACTS[a].title}. ${ACTS[a].sub}`;
+      if (liveEl) liveEl.textContent = ZH ? `第 ${a + 1} 部分（共 4 部分）：${ACTS[a].title}。${ACTS[a].sub}` : `Part ${a + 1} of 4: ${ACTS[a].title}. ${ACTS[a].sub}`;
     }
     chapterBtns.forEach((b, i) => b.style.setProperty('--p', i < a ? 1 : i > a ? 0 : p.toFixed(3)));
     let r;
-    if (a === 0) r = `vessel.stl · ${Math.round(18240 * ease(p / 0.75)).toLocaleString('en-AU')} triangles`;
-    else if (a === 1) r = `inflow · pulsatile · 70 bpm`;
-    else if (a === 2) { const q = ease(p / 0.85); r = q >= 0.999 ? 'ForgeFlow · converged ✓' : `ForgeFlow · iteration ${Math.round(1240 * q).toLocaleString('en-AU')} · residual ${Math.pow(10, -1 - 4.2 * q).toExponential(1)}`; }
-    else r = p < 0.3 ? 'FGT · mapping Θ over the wall…' : 'FGT · 3 spots above Θ = 1';
+    if (a === 0) r = `vessel.stl · ${Math.round(18240 * ease(p / 0.75)).toLocaleString('en-AU')}${ZH ? ' 个三角面' : ' triangles'}`;
+    else if (a === 1) r = tr('inflow · pulsatile · 70 bpm');
+    else if (a === 2) { const q = ease(p / 0.85); r = q >= 0.999 ? tr('ForgeFlow · converged ✓') : ZH ? `ForgeFlow · 第 ${Math.round(1240 * q).toLocaleString('en-AU')} 次迭代 · 残差 ${Math.pow(10, -1 - 4.2 * q).toExponential(1)}` : `ForgeFlow · iteration ${Math.round(1240 * q).toLocaleString('en-AU')} · residual ${Math.pow(10, -1 - 4.2 * q).toExponential(1)}`; }
+    else r = tr(p < 0.3 ? 'FGT · mapping Θ over the wall…' : 'FGT · 3 spots above Θ = 1');
     if (r !== lastRead) { readEl.textContent = r; lastRead = r; }
   }
 
@@ -310,7 +324,7 @@
   }
   function setPlaying(p) {
     playing = p; root.classList.toggle('paused', !p);
-    toggle.setAttribute('aria-pressed', String(!p)); toggle.querySelector('.lbl').textContent = p ? 'Pause' : 'Play';
+    toggle.setAttribute('aria-pressed', String(!p)); toggle.querySelector('.lbl').textContent = tr(p ? 'Pause' : 'Play');
     run();
   }
   chapterBtns.forEach(b => b.addEventListener('click', () => { jump(+b.dataset.act); if (!reduced) run(); }));

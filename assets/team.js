@@ -5,6 +5,8 @@
   const grid = document.querySelector('.team-grid');
   if (!grid) return;
   const wide = window.matchMedia('(min-width: 1240px)');
+  const ZH = /^zh/i.test(document.documentElement.lang);
+  const T = ZH ? { more: '展开全文', less: '收起', moreAbout: '展开全文：', lessAbout: '收起：' } : { more: 'Read more', less: 'Show less', moreAbout: 'Read more about ', lessAbout: 'Show less about ' };
   const cards = [...grid.querySelectorAll('.person')];
   cards.forEach((card, i) => {
     const bio = card.querySelector('.bio');
@@ -16,13 +18,13 @@
     btn.className = 'bio-more';
     btn.setAttribute('aria-controls', bio.id);
     btn.setAttribute('aria-expanded', 'false');
-    btn.textContent = 'Read more';
-    btn.setAttribute('aria-label', 'Read more about ' + name);
+    btn.textContent = T.more;
+    btn.setAttribute('aria-label', T.moreAbout + name);
     btn.addEventListener('click', () => {
       const open = card.classList.toggle('open');
       btn.setAttribute('aria-expanded', String(open));
-      btn.textContent = open ? 'Show less' : 'Read more';
-      btn.setAttribute('aria-label', (open ? 'Show less about ' : 'Read more about ') + name);
+      btn.textContent = open ? T.less : T.more;
+      btn.setAttribute('aria-label', (open ? T.lessAbout : T.moreAbout) + name);
     });
     bio.after(btn);
   });
@@ -41,7 +43,7 @@
     if (!wide.matches) cards.forEach(card => {
       card.classList.remove('open');
       const b = card.querySelector('.bio-more');
-      if (b) { b.setAttribute('aria-expanded', 'false'); b.textContent = 'Read more'; }
+      if (b) { b.setAttribute('aria-expanded', 'false'); b.textContent = T.more; }
     });
     measure();
   };

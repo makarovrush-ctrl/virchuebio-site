@@ -54,6 +54,17 @@ em{font-style:italic}
 .site-header nav a[aria-current=page]::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;background:var(--teal-bright);border-radius:2px}
 .site-header nav .nav-cta{border:1px solid rgba(60,199,179,.55);color:#e9fffb;border-radius:999px;padding:8px 16px}
 .site-header nav .nav-cta:hover{background:rgba(60,199,179,.12)}
+.site-header nav{margin-left:auto}
+.lang-switch{display:flex;align-items:center;gap:2px;flex:none;padding:3px;border:1px solid var(--night-line);border-radius:999px;font:500 12px/1 var(--mono);letter-spacing:.04em}
+.lang-switch a{color:var(--night-muted);text-decoration:none;padding:6px 9px;border-radius:999px}
+.lang-switch a:hover{color:#fff}
+.lang-switch a[aria-current=true]{background:rgba(60,199,179,.16);color:#fff}
+/* Chinese pages: Latin text keeps the site fonts, Chinese falls back to good system fonts */
+html:lang(zh-Hans){--serif:"Instrument Serif","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC","Noto Sans CJK SC",sans-serif;--sans:"IBM Plex Sans","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC","Noto Sans CJK SC",system-ui,sans-serif}
+html:lang(zh-Hans) body{line-height:1.75}
+html:lang(zh-Hans) em{font-style:normal}
+html:lang(zh-Hans) .hero .note,html:lang(zh-Hans) .learn-note{font-family:var(--sans)}
+html:lang(zh-Hans) h1,html:lang(zh-Hans) h2{letter-spacing:.01em;line-height:1.25}
 
 /* Buttons */
 .actions{display:flex;flex-wrap:wrap;gap:12px;margin:30px 0 14px}
@@ -240,6 +251,9 @@ em{font-style:italic}
   body{font-size:16px}
   .site-header{position:static}
   .site-header .wrap{flex-direction:column;align-items:flex-start;gap:10px;padding-top:14px;padding-bottom:12px}
+  .site-header .wrap{position:relative}
+  .site-header nav{margin-left:0}
+  .lang-switch{position:absolute;top:12px;right:var(--gutter)}
   .site-header nav{gap:18px;flex-wrap:wrap;font-size:14px}
   .scope ul,.pillars,.team-grid,.cards{grid-template-columns:1fr}
   .scope ul{gap:16px}
