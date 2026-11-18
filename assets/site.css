@@ -65,6 +65,11 @@ html:lang(zh-Hans) body{line-height:1.75}
 html:lang(zh-Hans) em{font-style:normal}
 html:lang(zh-Hans) .hero .note,html:lang(zh-Hans) .learn-note{font-family:var(--sans)}
 html:lang(zh-Hans) h1,html:lang(zh-Hans) h2{letter-spacing:.01em;line-height:1.25}
+/* Chinese pages: the Chinese name above the VirChue BIO wordmark */
+.brand-word.brand-zh{display:flex;flex-direction:column;align-items:flex-start;gap:5px;line-height:1}
+.brand-zh .zh-name{font:600 19px/1 var(--sans);letter-spacing:.12em;color:#fff}
+.brand-zh .en-name{font:400 16px/1 "Instrument Serif",Georgia,serif;letter-spacing:.01em;color:var(--night-text)}
+.brand-zh .en-name small{font-size:8.5px;margin-left:5px;vertical-align:2px}
 
 /* Buttons */
 .actions{display:flex;flex-wrap:wrap;gap:12px;margin:30px 0 14px}
@@ -211,6 +216,7 @@ html:lang(zh-Hans) h1,html:lang(zh-Hans) h2{letter-spacing:.01em;line-height:1.2
 .person .bio{flex:1}
 .person h2{font-size:30px;margin-bottom:10px}
 .role{font:500 11.5px/1.55 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--teal);margin:0}
+.role .nw{white-space:nowrap}
 .affil{font-size:14px;color:var(--muted);border-top:1px solid var(--line);margin:16px 0 14px;padding-top:14px}
 .bio{font-size:15px;color:var(--ink-2);line-height:1.7}
 .links{display:flex;flex-wrap:wrap;gap:16px;font:500 13px/1 var(--mono);letter-spacing:.03em}
