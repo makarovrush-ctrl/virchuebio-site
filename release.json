@@ -1,6 +1,6 @@
 {
   "schema": "virchuebio-site-release/2",
-  "publishedAt": "2026-11-18T02:15:30.440Z",
+  "publishedAt": "2026-11-18T03:25:58.356Z",
   "mode": "public",
   "domain": "www.virchuebio.com",
   "forgeflowBuild": {
@@ -34,8 +34,8 @@
       "bytes": 19
     },
     "app/index.html": {
-      "sha256": "03880e1b3db595a8d68b1d3573407b3492e95aa8c3c8f65e00df237b08a275ee",
-      "bytes": 581967
+      "sha256": "495a4ddcfba6b85dbc83a3ff367256a12fab01ae594188c053816cf37a2f8e4f",
+      "bytes": 582423
     },
     "app/vendor/THREE-LICENSE.txt": {
       "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
@@ -102,12 +102,12 @@
       "bytes": 7065657
     },
     "assets/site.css": {
-      "sha256": "1b71e9419eb15da74ee58eaeb8c5d7cd1796953a2dab9b839b91d9c58abba7a0",
-      "bytes": 28022
+      "sha256": "dfe9c1ec5ce89b4da69ab95ef74e5c2f3d6ea99befff71f18f12ae3ebe1f2b2c",
+      "bytes": 29202
     },
     "assets/story.js": {
-      "sha256": "29f258b860c7f54d23259fb412ae9cbd89f64d6d1e9b8a20871c5d4ead1f9e3e",
-      "bytes": 20762
+      "sha256": "638fa39d3297b48efe5888f9c212ba067d7c4ca2d3e1b85a5378ffab0d0bd9a6",
+      "bytes": 22566
     },
     "assets/team/allan-sun.jpg": {
       "sha256": "d27e13c60fd22d393e1bb6f669433b1838ab872c25762e1b0e70fa3300ba5aff",
@@ -130,40 +130,56 @@
       "bytes": 39342
     },
     "assets/team.js": {
-      "sha256": "cf15f636128588796a499e2304de2777b33477eb827315f56ce3616aac72a5c9",
-      "bytes": 2117
+      "sha256": "186b9de943db5cd6fbe30ccad46085147c3f9349b3154ea5ba7ac12913a32411",
+      "bytes": 2351
     },
     "community.html": {
-      "sha256": "5d7c149088b2d1ec66f2903491204adeb3d3652bebbe057bca52c6d74ac92b4e",
-      "bytes": 5766
+      "sha256": "628c3e597d41a2c2efa1cbb7f708572b3f1f7cc781bcfe2728bc1c57d22be29e",
+      "bytes": 6239
     },
     "contact.html": {
-      "sha256": "aa88174f06ac72fdf4e9d3a76f65b1e149985f74a2d42d44e90063310836125a",
-      "bytes": 4365
+      "sha256": "d2bdb798d32e3e59d8b439dccf2871cd9915583e40675a7647cd4aac373f3500",
+      "bytes": 4828
     },
     "favicon.svg": {
       "sha256": "c7734d95757ed800905d78d4b633e233455055796cb327e072ccf587c649d713",
       "bytes": 8082
     },
     "index.html": {
-      "sha256": "a383bdd3d5e21c0e102b9a3d7334762fc7059c644de118af2b0929408aa4ccf2",
-      "bytes": 21020
+      "sha256": "c5eb70e68188475515682f18ea05b7d752e72568f6bb77f82258e97336840942",
+      "bytes": 21473
     },
     "privacy.html": {
-      "sha256": "ba9771b8f9d2553099fab64504d808f1276f213e4a95ee47fa6f333a17751d1f",
-      "bytes": 7974
+      "sha256": "1a76dcfa6c6258237b19077af66f34703db7f9a37be5447b07125bff054d8bc1",
+      "bytes": 8171
     },
     "robots.txt": {
       "sha256": "17f15a556bbe026640db462476659d39c78639a926c6cc93410b3ce3ad710878",
       "bytes": 39
     },
     "team.html": {
-      "sha256": "4bc00df1adc8fd193f62b28662316b60c8add45848fc218afa6938a5f5a9f8a5",
-      "bytes": 9208
+      "sha256": "6698bbdc3bb793bf89e8ee22aab2189d25f4ab862d88f2c84392f2f14d18c232",
+      "bytes": 9656
     },
     "terms.html": {
-      "sha256": "0ce36fe9c72d57d9a13faa67f3857d55be03037de0109f5f30dd5b2ee6fd6ddd",
-      "bytes": 9354
+      "sha256": "9fa771ceaa6b45cc13ff4bc9872908eded0bb4d252134146f39c4f2a0c969f64",
+      "bytes": 9549
+    },
+    "zh/community.html": {
+      "sha256": "95f56388ede104fb7115ede19e4cbdb8de0548d9920a560d544908a072bcceb5",
+      "bytes": 6191
+    },
+    "zh/contact.html": {
+      "sha256": "31f76c75c3bef2a557f7a770d2f65828c2dc6dbb0189947763683c4dbba97865",
+      "bytes": 4806
+    },
+    "zh/index.html": {
+      "sha256": "5c3dcf1206c7e7473bb075ffc22ba4a58e4394b0ce0b8d2fe0d5ba8c97d1977c",
+      "bytes": 21444
+    },
+    "zh/team.html": {
+      "sha256": "4b2d4e4fd65e025791fd21728dbddcc0ad26bb32f0068d396c75f5acdf3eec8f",
+      "bytes": 9369
     }
   },
   "wrapper": "Public pages from pages/. App pages hardened by tools/harden.mjs: method panels and manuscript provenance replaced, code minified, comments removed.",
