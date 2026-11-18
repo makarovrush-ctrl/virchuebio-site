@@ -1,6 +1,6 @@
 {
   "schema": "virchuebio-site-release/2",
-  "publishedAt": "2026-11-18T03:45:30.727Z",
+  "publishedAt": "2026-11-18T04:15:45.516Z",
   "mode": "public",
   "domain": "www.virchuebio.com",
   "forgeflowBuild": {
@@ -161,8 +161,8 @@
       "bytes": 39
     },
     "team.html": {
-      "sha256": "6698bbdc3bb793bf89e8ee22aab2189d25f4ab862d88f2c84392f2f14d18c232",
-      "bytes": 9656
+      "sha256": "dcf0d9826b02c1c3042dd9ef1b5478cf76bee6733623c3d05e5352e0c67e84b5",
+      "bytes": 10060
     },
     "terms.html": {
       "sha256": "8d79dc41ad85baadab102b85b8fe37e11b41bea8bd43196629808c39f3bb640f",
@@ -181,8 +181,8 @@
       "bytes": 21545
     },
     "zh/team.html": {
-      "sha256": "4b2d4e4fd65e025791fd21728dbddcc0ad26bb32f0068d396c75f5acdf3eec8f",
-      "bytes": 9369
+      "sha256": "0f1477b7b0d738846063df333768fbdd26c810fd1d93a5f591ce266ecb07d1bf",
+      "bytes": 9781
     }
   },
   "wrapper": "Public pages from pages/. App pages hardened by tools/harden.mjs: method panels and manuscript provenance replaced, code minified, comments removed.",
