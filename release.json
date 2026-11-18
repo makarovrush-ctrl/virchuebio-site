@@ -1,6 +1,6 @@
 {
   "schema": "virchuebio-site-release/2",
-  "publishedAt": "2026-11-18T00:40:56.677Z",
+  "publishedAt": "2026-11-18T00:54:46.860Z",
   "mode": "public",
   "domain": "www.virchuebio.com",
   "forgeflowBuild": {
@@ -102,8 +102,8 @@
       "bytes": 7065657
     },
     "assets/site.css": {
-      "sha256": "fb177e219bd1f66831a79ef5337d3a4f5862b2fcf28f90923a5cf18208a997da",
-      "bytes": 26782
+      "sha256": "1b71e9419eb15da74ee58eaeb8c5d7cd1796953a2dab9b839b91d9c58abba7a0",
+      "bytes": 28022
     },
     "assets/story.js": {
       "sha256": "29f258b860c7f54d23259fb412ae9cbd89f64d6d1e9b8a20871c5d4ead1f9e3e",
@@ -128,6 +128,10 @@
     "assets/team/yunduo-zhao.jpg": {
       "sha256": "6678db90aa74fd414a4d378c0dc6643c82b31fa601cbc418a799e171795f41f4",
       "bytes": 39342
+    },
+    "assets/team.js": {
+      "sha256": "cf15f636128588796a499e2304de2777b33477eb827315f56ce3616aac72a5c9",
+      "bytes": 2117
     },
     "community.html": {
       "sha256": "5d7c149088b2d1ec66f2903491204adeb3d3652bebbe057bca52c6d74ac92b4e",
@@ -154,8 +158,8 @@
       "bytes": 39
     },
     "team.html": {
-      "sha256": "f87333c7ac2317f20cf1ea7804c081beed6508c1b3b9b26a654003f66a8f6a91",
-      "bytes": 9034
+      "sha256": "58031d27f9dc332e9687f573aa96417b68c1e8d2a80020bc5d3724251d7bd83d",
+      "bytes": 9116
     },
     "terms.html": {
       "sha256": "0ce36fe9c72d57d9a13faa67f3857d55be03037de0109f5f30dd5b2ee6fd6ddd",
