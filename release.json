@@ -1,6 +1,6 @@
 {
   "schema": "virchuebio-site-release/2",
-  "publishedAt": "2026-11-17T23:15:16.480Z",
+  "publishedAt": "2026-11-18T00:40:56.677Z",
   "mode": "public",
   "domain": "www.virchuebio.com",
   "forgeflowBuild": {
@@ -102,8 +102,8 @@
       "bytes": 7065657
     },
     "assets/site.css": {
-      "sha256": "539e0b2feb7f06595de7c2e4ac889e388df41faf4913b5c102ada1fefc24a6cc",
-      "bytes": 26370
+      "sha256": "fb177e219bd1f66831a79ef5337d3a4f5862b2fcf28f90923a5cf18208a997da",
+      "bytes": 26782
     },
     "assets/story.js": {
       "sha256": "29f258b860c7f54d23259fb412ae9cbd89f64d6d1e9b8a20871c5d4ead1f9e3e",
@@ -113,6 +113,10 @@
       "sha256": "d27e13c60fd22d393e1bb6f669433b1838ab872c25762e1b0e70fa3300ba5aff",
       "bytes": 81672
     },
+    "assets/team/haimei-zhao.jpg": {
+      "sha256": "c17c3137f9ab86f0c27529da64d317ac1f055d9b1f25111e2d9261dae5905ada",
+      "bytes": 79585
+    },
     "assets/team/ken-tye-yong.jpg": {
       "sha256": "dc6e49e7897f51b30351c2141bdeb239ca0be1deb4597d186b8ee056c0d3dd4f",
       "bytes": 79949
@@ -120,6 +124,10 @@
     "assets/team/mackenzie-zhuang.jpg": {
       "sha256": "8707dd40f3a7c8c64f64cd3c711bd1dfadf9366627a85ae4ce2269bf5bd3662d",
       "bytes": 74435
+    },
+    "assets/team/yunduo-zhao.jpg": {
+      "sha256": "6678db90aa74fd414a4d378c0dc6643c82b31fa601cbc418a799e171795f41f4",
+      "bytes": 39342
     },
     "community.html": {
       "sha256": "5d7c149088b2d1ec66f2903491204adeb3d3652bebbe057bca52c6d74ac92b4e",
@@ -146,8 +154,8 @@
       "bytes": 39
     },
     "team.html": {
-      "sha256": "bfb375383aa4b932e6a749ba88fe96d230d77c72f13c02c7a8357415e0fbd0a1",
-      "bytes": 6815
+      "sha256": "f87333c7ac2317f20cf1ea7804c081beed6508c1b3b9b26a654003f66a8f6a91",
+      "bytes": 9034
     },
     "terms.html": {
       "sha256": "0ce36fe9c72d57d9a13faa67f3857d55be03037de0109f5f30dd5b2ee6fd6ddd",
