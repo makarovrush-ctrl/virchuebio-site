@@ -1,0 +1,5 @@
+@cornerstonejs/codec-libjpeg-turbo-8bit 1.2.8
+Licence declared in its package.json: ISC
+Author: 
+Upstream: git+https://github.com/cornerstonejs/codecs.git
+This package ships no separate licence file; see the upstream repository for the full licence text and the bundled library's own licence.
