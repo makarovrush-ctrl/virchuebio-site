@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Open VirchueBio X · Start</title>
+<meta name="description" content="Start VirchueBio X: drop a CT or MR scan, an STL or a saved case and the right stage opens. Files stay on your computer.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<style>
+@font-face{font-family:"Instrument Serif";src:url(../assets/fonts/instrument-serif-latin-400-normal.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Instrument Serif";src:url(../assets/fonts/instrument-serif-latin-400-italic.woff2) format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"IBM Plex Sans";src:url(../assets/fonts/ibm-plex-sans-latin-400-normal.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"IBM Plex Sans";src:url(../assets/fonts/ibm-plex-sans-latin-500-normal.woff2) format("woff2");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:"IBM Plex Sans";src:url(../assets/fonts/ibm-plex-sans-latin-600-normal.woff2) format("woff2");font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:"IBM Plex Mono";src:url(../assets/fonts/ibm-plex-mono-latin-400-normal.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"IBM Plex Mono";src:url(../assets/fonts/ibm-plex-mono-latin-500-normal.woff2) format("woff2");font-weight:500;font-style:normal;font-display:swap}
+:root{color-scheme:dark;--bg:#0a1a1e;--panel:#10282d;--raised:#15343a;--line:#24434a;--text:#e8f0ef;--soft:#c9d6d6;--muted:#9fb3b4;--teal:#3cc7b3;--coral:#ff6a5c;--onteal:#04201d;
+  font-family:"IBM Plex Sans",system-ui,"Segoe UI",sans-serif;font-size:16px;line-height:1.55}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--teal)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+[hidden]{display:none!important}
+.skip{position:absolute;left:-9999px;top:8px;background:var(--teal);color:var(--onteal);padding:8px 12px;border-radius:6px;z-index:10}
+.skip:focus{left:8px}
+.bar{display:flex;align-items:center;gap:24px;min-height:65px;padding:8px 22px;background:#0a1a1e;border-bottom:1px solid rgba(255,255,255,.12)}
+.vb-brand{display:flex;align-items:center;gap:10px;white-space:nowrap;text-decoration:none;color:#fff}
+.vb-mark{width:26px;height:26px;flex:none;stroke:#3cc7b3;stroke-width:2.5;fill:none;stroke-linecap:round}
+.vb-mark circle{fill:#0a1a1e;stroke:#ff6a5c}
+.vb-word{font:400 23px/1 "Instrument Serif",Georgia,serif;letter-spacing:.005em;color:#fff}
+.vb-word small{font:inherit;letter-spacing:inherit;color:#3cc7b3}
+.vb-word i{font:italic 400 25px/1 "Instrument Serif",Georgia,serif;color:#3cc7b3;margin-left:7px}
+.vb-ver{font:500 10.5px/1 "IBM Plex Mono",monospace;letter-spacing:.06em;color:#04201d;background:#3cc7b3;border-radius:999px;padding:4px 7px}
+.page-title{border-left:1px solid var(--line);padding-left:22px;line-height:1.3}
+.page-title strong{display:block;font-size:16px;font-weight:600}
+.page-title span{display:block;font-size:11.5px;color:var(--muted)}
+.local-note{margin-left:auto;color:var(--muted);font-size:11.5px}
+@media (max-width:980px){.page-title{display:none}}
+@media (max-width:700px){.local-note{display:none}.bar{padding:8px 14px}}
+main{flex:1;width:100%;max-width:1040px;margin:0 auto;padding:44px 22px 36px}
+.eyebrow{margin:0 0 10px;font:500 11.5px/1 "IBM Plex Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--teal)}
+h1{margin:0;font:400 clamp(34px,5.4vw,54px)/1.06 "Instrument Serif",Georgia,serif;letter-spacing:-.005em}
+h1 em{font-style:italic;color:var(--teal)}
+.lede{max-width:62ch;margin:14px 0 26px;color:var(--soft);font-size:17px}
+.drop{position:relative;padding:34px 24px 26px;border:1.5px dashed #3a6463;border-radius:14px;background:linear-gradient(180deg,rgba(21,52,58,.55),rgba(16,40,45,.55));text-align:center;transition:border-color .15s,background .15s}
+.drop.over{border-color:var(--teal);border-style:solid;background:rgba(60,199,179,.12)}
+.drop svg{width:46px;height:46px;stroke:var(--teal);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.drop strong{display:block;margin-top:10px;font:400 26px/1.2 "Instrument Serif",Georgia,serif}
+.hint{display:block;margin-top:4px;color:var(--muted);font-size:13.5px}
+.actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:18px 0 6px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:40px;padding:9px 16px;border:1px solid #2f5156;border-radius:8px;background:var(--raised);color:var(--text);font:500 14px/1.2 "IBM Plex Sans",system-ui,sans-serif;text-decoration:none;cursor:pointer}
+.btn:hover{background:#1b4046;border-color:#3f7a78}
+.btn.primary{background:var(--teal);border-color:var(--teal);color:var(--onteal);font-weight:600}
+.btn.primary:hover{background:#6fdccb}
+.status{min-height:1.6em;margin:12px auto 0;max-width:62ch;color:var(--muted);font-size:14px}
+.status.good{color:#8fe3d2}
+.status.warn{color:#f2c98a}
+.status.bad{color:#ffb3a9}
+.choice{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:12px}
+.stages{margin-top:46px}
+.stages h2{margin:0 0 6px;font:400 30px/1.15 "Instrument Serif",Georgia,serif}
+.stages .sub{margin:0 0 20px;color:var(--muted);font-size:14.5px}
+.cards{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+@media (max-width:900px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:540px){.cards{grid-template-columns:1fr}}
+.card{display:flex;flex-direction:column;padding:18px 16px 16px;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+.card .n{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:rgba(60,199,179,.16);color:var(--teal);font:500 13px/1 "IBM Plex Mono",monospace}
+.card h3{margin:12px 0 6px;font:400 24px/1.15 "Instrument Serif",Georgia,serif}
+.card p{margin:0 0 10px;color:var(--soft);font-size:14px}
+.card .have{margin-top:auto;padding-top:4px;color:var(--teal);font:500 11.5px/1.4 "IBM Plex Mono",monospace;letter-spacing:.04em}
+.card .btn{margin-top:12px;width:100%}
+.card .more{margin:10px 0 0;text-align:center;font-size:13px}
+.note{margin-top:34px;color:var(--muted);font-size:13px}
+footer{border-top:1px solid rgba(255,255,255,.12);padding:16px 22px;color:var(--muted);font-size:12.5px;text-align:center}
+footer a{color:var(--soft)}
+
+.vb-steps{display:flex;align-items:center;gap:3px;margin:0 auto;font:500 12px/1 "IBM Plex Sans",system-ui,sans-serif;flex:0 1 auto;min-width:0}
+.vb-steps a{display:flex;align-items:center;gap:7px;padding:6px 11px 6px 7px;border-radius:999px;color:#a3b9b9;text-decoration:none;border:1px solid transparent;white-space:nowrap}
+.vb-steps a b{flex:none;width:19px;height:19px;border-radius:50%;display:grid;place-items:center;font:500 10.5px/1 "IBM Plex Mono",monospace;background:rgba(60,199,179,.16);color:#3cc7b3}
+.vb-steps a:hover{color:#fff;border-color:rgba(60,199,179,.4)}
+.vb-steps a:focus-visible{outline:2px solid #3cc7b3;outline-offset:2px}
+.vb-steps a.on{color:#e8f5f3;background:rgba(60,199,179,.14);border-color:rgba(60,199,179,.35)}
+.vb-steps a[aria-current="step"]{color:#04201d;background:#3cc7b3;border-color:#3cc7b3}
+.vb-steps a[aria-current="step"] b{background:#04201d;color:#3cc7b3}
+.vb-steps i{flex:none;width:9px;height:1px;background:rgba(255,255,255,.28)}
+@media (max-width:1240px){.vb-steps a:not(.on) span{display:none}.vb-steps a:not(.on){padding:6px 5px}}
+@media (max-width:980px){.vb-steps{display:none}}
+.bar .vb-steps{margin:0 auto}
+@media (max-width:980px){.vb-steps{display:flex}.bar{flex-wrap:wrap}.vb-steps{margin:0 0 0 auto}}
+@media (max-width:620px){.vb-steps a:not(.on) span{display:inline}.vb-steps{flex-wrap:wrap;margin:6px 0 0}.vb-steps i{display:none}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="bar">
+  <a class="vb-brand" href="../index.html" aria-label="VirchueBio X v2.1: back to the VirchueBio website"><svg class="vb-mark" viewBox="0 0 36 36" aria-hidden="true"><path d="M18 33V20M18 20 7 6M18 20 29 6"/><circle cx="18" cy="20" r="3.6"/></svg><span class="vb-word">Virchue<small>Bio</small><i>X</i></span><span class="vb-ver">v2.1</span></a>
+  <div class="page-title"><strong>Start</strong><span>Bring a scan, an STL or a saved case</span></div>
+  <nav class="vb-steps" aria-label="Workflow stages"><a href="dicom-extract.html" title="Scan: pick the vessel out of a CT or MR scan"><b>1</b><span>Scan</span></a><i aria-hidden="true"></i><a href="vessel-prep.html" title="Prepare: review the vessel openings and units"><b>2</b><span>Prepare</span></a><i aria-hidden="true"></i><a href="index.html" title="Flow: mesh the vessel and run the blood flow"><b>3</b><span>Flow</span></a><i aria-hidden="true"></i><a href="index.html" title="Thrombosis: the thrombosis number Θ appears in the flow solver’s results"><b>4</b><span>Thrombosis</span></a></nav>
+  <span class="local-note">Files stay on this computer</span>
+</header>
+
+<main id="main">
+  <p class="eyebrow">Open VirchueBio X</p>
+  <h1>Bring what you have. <em>The right stage opens.</em></h1>
+  <p class="lede">Drop a CT or MR scan, an STL surface or a saved case. VirchueBio X recognises it and opens the stage it belongs to. The files are read in this browser and are not uploaded.</p>
+
+  <div id="drop" class="drop" role="group" aria-labelledby="dropTitle">
+    <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 33V9M14 19l10-10 10 10"/><path d="M8 31v6a3 3 0 0 0 3 3h26a3 3 0 0 0 3-3v-6"/></svg>
+    <strong id="dropTitle">Drop a scan folder, an STL or a saved case here</strong>
+    <span class="hint">A folder of DICOM slices · an STL file or folder · a saved case (JSON)</span>
+    <div class="actions">
+      <button id="pickFolder" class="btn primary" type="button">Choose a scan or STL folder</button>
+      <button id="pickFiles" class="btn" type="button">Choose files</button>
+    </div>
+    <p id="status" class="status" role="status" aria-live="polite">Nothing is uploaded. The files are only read on this computer.</p>
+    <div id="choice" class="choice" hidden></div>
+    <input id="folderInput" type="file" webkitdirectory directory multiple hidden>
+    <input id="fileInput" type="file" multiple hidden>
+  </div>
+  <noscript><p class="status warn">Dropping files needs JavaScript. You can still open each stage from the buttons below.</p></noscript>
+
+  <section class="stages" aria-labelledby="stagesTitle">
+    <h2 id="stagesTitle">Or start at a stage</h2>
+    <p class="sub">The workflow has four stages. Start at the first one you need.</p>
+    <ol class="cards">
+      <li class="card">
+        <span class="n" aria-hidden="true">1</span>
+        <h3>Scan</h3>
+        <p>Pick the vessel out of a CT or MR angiography series and turn it into a 3D surface.</p>
+        <span class="have">Start here with a CT or MR scan</span>
+        <a class="btn primary" href="dicom-extract.html">Open DICOM extraction</a>
+      </li>
+      <li class="card">
+        <span class="n" aria-hidden="true">2</span>
+        <h3>Prepare</h3>
+        <p>Review the vessel’s openings, set each one as inlet or outlet, and check the units.</p>
+        <span class="have">Start here with an STL</span>
+        <a class="btn primary" href="vessel-prep.html">Open vessel preparation</a>
+      </li>
+      <li class="card">
+        <span class="n" aria-hidden="true">3</span>
+        <h3>Flow</h3>
+        <p>Mesh the vessel and run the blood-flow simulation, or try a built-in example.</p>
+        <span class="have">Start here with a saved case</span>
+        <a class="btn primary" href="index.html">Open the flow solver</a>
+        <p class="more"><a href="index.html#demo">▶ Run the guided demo</a></p>
+      </li>
+      <li class="card">
+        <span class="n" aria-hidden="true">4</span>
+        <h3>Thrombosis</h3>
+        <p>When the flow has converged, the thrombosis number Θ is mapped on the vessel wall. It appears in the flow solver’s results.</p>
+        <span class="have">Follows the flow</span>
+        <a class="btn" href="index.html">Go to the flow solver</a>
+      </li>
+    </ol>
+  </section>
+
+  <p class="note">Research use only. Not a medical device. Don’t load identifiable patient data unless you are permitted to. Nothing leaves your computer unless you choose “Submit to VirchueBio” in the flow solver (<a href="../privacy.html">Privacy</a>).</p>
+</main>
+
+<footer>
+  <a href="../index.html">VirchueBio home</a> · <a href="../privacy.html">Privacy</a> · <a href="../terms.html">Terms</a> · <a href="../changelog.html">What’s new</a>
+</footer>
+
+<script>
+(function(){"use strict";
+var $=function(id){return document.getElementById(id)};
+var ROUTES={dicom:{page:"dicom-extract.html",name:"DICOM extraction"},stl:{page:"vessel-prep.html",name:"vessel preparation"},"case":{page:"index.html",name:"the flow solver"}};
+var busy=false;
+function say(t,kind){var s=$("status");s.textContent=t;s.className="status"+(kind?" "+kind:"")}
+function relOf(f){return f.webkitRelativePath||f._vbRel||""}
+function plural(n,w){return n+" "+w+(n===1?"":"s")}
+
+/* Files from a drop, folders included. The entries must be taken before the first await. */
+function readAll(reader){return new Promise(function(res,rej){var all=[];(function next(){reader.readEntries(function(b){if(!b.length)return res(all);all=all.concat(Array.prototype.slice.call(b));next()},rej)})()})}
+function walk(entry,path,out){
+  if(entry.isFile)return new Promise(function(res){entry.file(function(f){f._vbRel=path+f.name;out.push(f);res()},function(){res()})});
+  if(!entry.isDirectory)return Promise.resolve();
+  return readAll(entry.createReader()).then(function(kids){var p=Promise.resolve();kids.forEach(function(k){p=p.then(function(){return walk(k,path+entry.name+"/",out)})});return p});
+}
+function fromDrop(dt){
+  var entries=[];
+  Array.prototype.slice.call(dt.items||[]).forEach(function(it){if(it.kind==="file"&&it.webkitGetAsEntry){var e=it.webkitGetAsEntry();if(e)entries.push(e)}});
+  var plain=Array.prototype.slice.call(dt.files||[]);
+  if(!entries.length)return Promise.resolve(plain);
+  var out=[],p=Promise.resolve();
+  entries.forEach(function(e){p=p.then(function(){return walk(e,"",out)})});
+  return p.then(function(){return out.length?out:plain});
+}
+
+/* What is it? DICOM files often have no extension, so those are checked for the "DICM" mark at byte 128. */
+var OTHER=/\.(jpe?g|png|gif|bmp|tiff?|pdf|txt|md|xml|html?|csv|docx?|xlsx?|pptx?|log|ini|db|lnk)$/i;
+function isDicm(f){if(f.size<=132)return Promise.resolve(false);return f.slice(128,132).arrayBuffer().then(function(b){var a=new Uint8Array(b);return a[0]===68&&a[1]===73&&a[2]===67&&a[3]===77},function(){return false})}
+function classify(files){
+  var c={dicom:[],stl:[],json:[],zip:[],other:[],unknown:[]},maybe=[];
+  files.forEach(function(f){
+    var n=f.name;
+    if(/^\./.test(n)||/^(thumbs\.db|desktop\.ini)$/i.test(n))return;
+    if(/\.stl$/i.test(n))c.stl.push(f);
+    else if(/\.json$/i.test(n))c.json.push(f);
+    else if(/\.zip$/i.test(n))c.zip.push(f);
+    else if(/\.(dcm|ima|dicom)$/i.test(n)||/^DICOMDIR$/i.test(n))c.dicom.push(f);
+    else if(OTHER.test(n))c.other.push(f);
+    else maybe.push(f);
+  });
+  var p=Promise.resolve();
+  for(var i=0;i<maybe.length;i+=64)(function(chunk){p=p.then(function(){return Promise.all(chunk.map(isDicm))}).then(function(r){chunk.forEach(function(f,k){(r[k]?c.dicom:c.unknown).push(f)})})})(maybe.slice(i,i+64));
+  return p.then(function(){return c});
+}
+function decide(c){
+  var nd=c.dicom.length,ns=c.stl.length,nj=c.json.length;
+  if(nd&&ns)return {kind:"mixed"};
+  if(nd)return {kind:"route",route:"dicom",files:c.dicom,what:"a DICOM scan ("+plural(nd,"file")+")"};
+  if(ns)return {kind:"route",route:"stl",files:c.stl,what:ns===1?"an STL file":plural(ns,"STL file")};
+  if(nj===1)return {kind:"route",route:"case",files:c.json,what:"a saved case (JSON)"};
+  if(nj>1)return {kind:"none",msg:"There are "+nj+" JSON files here. Drop one saved case at a time."};
+  if(c.zip.length)return {kind:"none",msg:"That is a ZIP archive, and a ZIP can’t be read directly. Unzip it, then drop the folder."};
+  if(c.unknown.length>=3)return {kind:"unsure"};
+  return {kind:"none",msg:"I couldn’t recognise those files. VirchueBio X reads a folder of DICOM slices, STL surfaces and saved cases (JSON)."};
+}
+
+/* Hand the files to the stage through the browser's own storage (same store as the DICOM hand-over). */
+function openDB(){return new Promise(function(res,rej){if(!window.indexedDB)return rej(new Error("no storage"));var r=indexedDB.open("virchuebio-handoff",1);r.onupgradeneeded=function(){r.result.createObjectStore("files")};r.onsuccess=function(){res(r.result)};r.onerror=function(){rej(r.error)}})}
+function give(route,files){
+  return openDB().then(function(db){return new Promise(function(res,rej){
+    var tx=db.transaction("files","readwrite");
+    tx.objectStore("files").put({route:route,files:files,rel:files.map(relOf),at:Date.now()},"start-files");
+    tx.oncomplete=function(){db.close();res()};
+    tx.onerror=function(){rej(tx.error)};tx.onabort=function(){rej(tx.error||new Error("aborted"))};
+  })});
+}
+function go(route,files,what){
+  var r=ROUTES[route];
+  busy=true;$("choice").hidden=true;
+  say("Recognised "+what+". Opening "+r.name+"…","good");
+  give(route,files).then(function(){location.href=r.page+"#from-start"},function(){
+    busy=false;
+    var s=$("status");s.className="status bad";s.textContent="This browser wouldn’t pass the files on. Open "+r.name+" and choose them there: ";
+    var a=document.createElement("a");a.href=r.page;a.textContent="open "+r.name;s.appendChild(a);
+  });
+}
+function handle(files){
+  if(busy)return;
+  if(!files||!files.length){say("Nothing to open in that drop.","warn");return}
+  $("choice").hidden=true;
+  say("Looking at "+plural(files.length,"file")+"…");
+  classify(files).then(function(c){
+    var d=decide(c);
+    if(d.kind==="route")return go(d.route,d.files,d.what);
+    if(d.kind==="mixed"){
+      say("That has a DICOM scan ("+plural(c.dicom.length,"file")+") and "+plural(c.stl.length,"STL file")+". Which one do you want to open?","warn");
+      var ch=$("choice");ch.textContent="";
+      [["Open the scan in DICOM extraction","dicom",c.dicom,"a DICOM scan"],["Open the STL in vessel preparation","stl",c.stl,"an STL"]].forEach(function(o,i){
+        var b=document.createElement("button");b.type="button";b.className="btn"+(i?"":" primary");b.textContent=o[0];
+        b.onclick=function(){go(o[1],o[2],o[3])};ch.appendChild(b);
+      });
+      ch.hidden=false;return;
+    }
+    if(d.kind==="unsure"){
+      say("I couldn’t tell what these "+plural(c.unknown.length,"file")+" are. If they are the slices of a CT or MR scan, DICOM extraction can try to read them.","warn");
+      var ch2=$("choice");ch2.textContent="";
+      var b2=document.createElement("button");b2.type="button";b2.className="btn primary";b2.textContent="Try them in DICOM extraction";
+      b2.onclick=function(){go("dicom",c.unknown,"a possible DICOM scan ("+plural(c.unknown.length,"file")+")")};ch2.appendChild(b2);ch2.hidden=false;return;
+    }
+    say(d.msg,"bad");
+  }).catch(function(){say("Those files couldn’t be read. Try again, or open a stage below and choose them there.","bad")});
+}
+
+/* Controls */
+var drop=$("drop"),depth=0;
+function hasFiles(e){return e.dataTransfer&&Array.prototype.indexOf.call(e.dataTransfer.types||[],"Files")>=0}
+document.addEventListener("dragenter",function(e){if(hasFiles(e)){e.preventDefault();depth++;drop.classList.add("over")}});
+document.addEventListener("dragover",function(e){if(hasFiles(e))e.preventDefault()});
+document.addEventListener("dragleave",function(){depth=Math.max(0,depth-1);if(!depth)drop.classList.remove("over")});
+document.addEventListener("drop",function(e){
+  if(!hasFiles(e))return;
+  e.preventDefault();depth=0;drop.classList.remove("over");
+  fromDrop(e.dataTransfer).then(handle,function(){say("That drop couldn’t be read. Try “Choose files” instead.","bad")});
+});
+$("pickFolder").onclick=function(){$("folderInput").click()};
+$("pickFiles").onclick=function(){$("fileInput").click()};
+$("folderInput").onchange=function(e){var l=Array.prototype.slice.call(e.target.files);e.target.value="";handle(l)};
+$("fileInput").onchange=function(e){var l=Array.prototype.slice.call(e.target.files);e.target.value="";handle(l)};
+window.addEventListener("pageshow",function(e){if(e.persisted){busy=false;say("Nothing is uploaded. The files are only read on this computer.")}});
+})();
+</script>
+<script data-goatcounter="https://virchuebio.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>
