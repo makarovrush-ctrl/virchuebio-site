@@ -1,13 +1,13 @@
 {
   "schema": "virchuebio-site-release/3",
-  "version": "2.0.1",
-  "publishedAt": "2026-11-21T08:57:01.354Z",
+  "version": "2.0.2",
+  "publishedAt": "2026-11-21T11:25:40.053Z",
   "mode": "public",
   "domain": "www.virchuebio.com",
   "changelog": {
-    "newest": "2.0.1",
+    "newest": "2.0.2",
     "date": "2026-11-21",
-    "sha256": "adda12724a5a4f3d7b3335ff5abc98907c90310695c46b753b821a2d171459d3"
+    "sha256": "4e71f672155423467a8b00603076800de8e8595bb685c2e43ba816a1086676f4"
   },
   "forgeflowBuild": {
     "sourceHashes": {
@@ -53,19 +53,19 @@
       "bytes": 560
     },
     "CHANGELOG.md": {
-      "sha256": "adda12724a5a4f3d7b3335ff5abc98907c90310695c46b753b821a2d171459d3",
-      "bytes": 6958
+      "sha256": "4e71f672155423467a8b00603076800de8e8595bb685c2e43ba816a1086676f4",
+      "bytes": 7615
     },
     "CNAME": {
       "sha256": "3e47e0f00befc122fe89357ae646e3274bf9dcf4febfd9f022cdb2bdb9957989",
       "bytes": 19
     },
     "README.md": {
-      "sha256": "9e47c8322e4760ca49f9899b976f57be192044563a2f5fb71b07dae9c16e0b5f",
+      "sha256": "19bb4a6fb6e1bc6bee80447ca59ec9b187b6f981b2cbc591a5b46bbdb0eb865e",
       "bytes": 541
     },
     "app/dicom-extract.html": {
-      "sha256": "3d38122e70ae3fe526e392cfb1566d048d779f053bdbab83e405543aa90e020b",
+      "sha256": "a0afd3afdcd6f973c807b93e784fa79f223ef003d521426fa397529e606164c2",
       "bytes": 43713
     },
     "app/examples/cta-phantom/IM0001.dcm": {
@@ -433,7 +433,7 @@
       "bytes": 1543
     },
     "app/index.html": {
-      "sha256": "610a8122e5113646e0c2eeb408d086cefa7a33e9cc7b96ed62e40dea0798e127",
+      "sha256": "5be4e5078d7db671e517c052507763a1bb179bb5dc86576b95ff0f17c9e5fda2",
       "bytes": 594173
     },
     "app/vendor/THREE-LICENSE.txt": {
@@ -453,7 +453,7 @@
       "bytes": 701356
     },
     "app/vessel-prep.html": {
-      "sha256": "70054a4c987d9658d1f0a6c0334438f7ce25ce5cfc992959979a41b7a0f67481",
+      "sha256": "c3cc831cba00a90d23bca99032e16f10ad2b373843e3f3298ca9ec54d2f08157",
       "bytes": 116792
     },
     "assets/fonts/FONT-LICENSES.txt": {
@@ -532,16 +532,24 @@
       "sha256": "18a2b9b28a81deeb988f9bf4377b05a98d4fa3ff10a1ceb4a266479799ca0365",
       "bytes": 2350
     },
+    "assets/workflow-poster.jpg": {
+      "sha256": "b103bea7ef16ecdcff0c1ee89c08a46d7b4a89c694742f5a80cc6c05a71c7a6d",
+      "bytes": 65570
+    },
+    "assets/workflow.mp4": {
+      "sha256": "34536262bf14aac6cfe118ec4550b6741b57d1870316095bfe60d84f08efd177",
+      "bytes": 4751842
+    },
     "changelog.html": {
-      "sha256": "1aaee0e47ba4d9bee3098349e0643d58f2bd2e2da4dd3ae691e572918312a29c",
-      "bytes": 10722
+      "sha256": "17e587a7507ad47bd3bcbdfb68277d47dfebcb27b21b570934ffdb7d4a3ddbf0",
+      "bytes": 11627
     },
     "community.html": {
-      "sha256": "4128cdf7e0c7ec73b7733392ffcce267fa4acae2bf089636838c4f4a49d07285",
+      "sha256": "6724ed99be9f648633b7276d25ae1b5782d28da75ae77023d3badb80e561cabb",
       "bytes": 6357
     },
     "contact.html": {
-      "sha256": "ffa02a49c7f5542add4e02d7b3a54b2ba0bfedf1f5ffc5dee7e67dec726edba3",
+      "sha256": "c004e1cdfb5433965d06ab855fea6270684d8d6caec6054e0fee8df4f1337134",
       "bytes": 4988
     },
     "favicon.svg": {
@@ -549,11 +557,11 @@
       "bytes": 8082
     },
     "index.html": {
-      "sha256": "5dc7cb54236960f92c4d7ee9be91de663e6acf02b9d93c8874ff9db4d73b59d3",
-      "bytes": 22574
+      "sha256": "fd0d80d594506a07aaf727d3b58ca16c5c351855b981f2ec98c5244bdb668f2b",
+      "bytes": 23732
     },
     "privacy.html": {
-      "sha256": "d818ca87b5ab0a5b06a5036a80b0698a0e15fdac9e4eac9b82b92b5c25071bb6",
+      "sha256": "7a62de3a2fd6c1a265fcf15d060ce4dc51cdecc43421dba7e905070278c8a742",
       "bytes": 9774
     },
     "robots.txt": {
@@ -561,27 +569,27 @@
       "bytes": 39
     },
     "team.html": {
-      "sha256": "87ed318d5b6432090e96db3fd6caa5f45da613964e141b35ae12d5698256247a",
+      "sha256": "d87400932e42c901abec14e34ac916b8adbefc31bf601a923b03b533a1d21dbc",
       "bytes": 10768
     },
     "terms.html": {
-      "sha256": "398550b633e3aab9e9483348d507970f123c6b984e1ba268025975ef3a25ef51",
+      "sha256": "e8faa03e9ab283972510f36fc06bebfada17a197f32204e3ab1a36f1b866d368",
       "bytes": 10215
     },
     "zh/community.html": {
-      "sha256": "b9fb5333c8b1a1176553cadf7c06eb7e29a4b35c48e05001b9438425a35bd920",
+      "sha256": "04b0bc2ac6e749ca10fa6be1791fd576af393d79793f500b115eba649986a44f",
       "bytes": 6586
     },
     "zh/contact.html": {
-      "sha256": "026854265e719643f8715d74d4a63be873544820a4d18d2bf394f152cee45792",
+      "sha256": "78e4971f6b5e8d321a3d6b7028f9eb51337c351f474dc2f2b2b3e58fc325565a",
       "bytes": 5236
     },
     "zh/index.html": {
-      "sha256": "d6017043b413ea53a2fb05b42148be9c55fe13b3627617d7aba6cd7faa84d7ec",
-      "bytes": 22904
+      "sha256": "2c82df47198264b13442c5a0bdb047af3a76d0a5771d7b275dce110682b9f448",
+      "bytes": 23980
     },
     "zh/team.html": {
-      "sha256": "3154ffc4a54dcfaae20575eaf04edc046955b4db690e8493d471082e612d485e",
+      "sha256": "186b57bc062acfb45d2ad5029ddd75b948d6a7a9158fdc4e0034562ae1983b4b",
       "bytes": 10681
     }
   },

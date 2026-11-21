@@ -10,6 +10,16 @@ How versions are numbered:
 
 Every update that changes what the website shows gets a new version number and an entry here before it is published. Set the same number in `site-config.json` (`platform.version`). `tools/publish.mjs` refuses to publish if the two don't match, or if the content changed but the version didn't. See the README, "Versions and the changelog".
 
+## X 2.0.2 — 2026-11-21
+
+The home page now has a one-minute video of the whole workflow.
+
+### Website
+
+- New section "See the whole workflow" right under the headline: a 1 min 2 s video that follows one example from a CT scan (DICOM) to the 3D vessel, the prepared vessel, the blood-flow simulation and the Θ map. It has music and text on screen, and plays only when you press play. The existing getting-started video stays in "Start here".
+- The video says plainly that the example is a synthetic scan, that run times depend on the vessel, and that the Θ risk bands are proposed and not yet calibrated.
+- The same section is on the Chinese home page.
+
 ## X 2.0.1 — 2026-11-21
 
 The home page now starts from a scan.
