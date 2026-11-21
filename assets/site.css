@@ -128,7 +128,7 @@ html:lang(zh-Hans) h1,html:lang(zh-Hans) h2{letter-spacing:.01em;line-height:1.2
 .section-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.8fr);gap:40px;align-items:end;margin-bottom:clamp(36px,5vw,56px)}
 .section-head h2{font-size:clamp(36px,4.4vw,58px)}
 .section-head p{color:var(--muted);margin:0;font-size:15.5px}
-.pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.pillars{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
 .pillar{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 26px 26px;position:relative;transition:transform .25s,box-shadow .25s,border-color .25s}
 .pillar:hover{transform:translateY(-3px);box-shadow:0 18px 40px -24px rgba(15,35,40,.35);border-color:var(--line-2)}
 .pillar .num{font:500 12px/1 var(--mono);letter-spacing:.12em;color:var(--muted)}
