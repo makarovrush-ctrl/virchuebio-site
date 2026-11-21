@@ -1,13 +1,13 @@
 {
   "schema": "virchuebio-site-release/3",
-  "version": "2.1",
-  "publishedAt": "2026-11-21T12:23:51.773Z",
+  "version": "3.0",
+  "publishedAt": "2026-11-21T12:59:35.970Z",
   "mode": "public",
   "domain": "www.virchuebio.com",
   "changelog": {
-    "newest": "2.1",
-    "date": "2026-11-21",
-    "sha256": "dcfeb288a84ed2c67e653efa02e3122a27db6a3c7b8c20c574e2042c2321e3d9"
+    "newest": "3.0",
+    "date": "2026-11-22",
+    "sha256": "2c7007a127a1b1eb74d02ed59226d5e1f4ac04bff6211d91adf7ccc2da4bc8d3"
   },
   "forgeflowBuild": {
     "sourceHashes": {
@@ -22,7 +22,7 @@
   "modules": {
     "dicom-extract": {
       "source": "modules/dicom-extract/dicom-extract.html",
-      "sourceSha256": "2aa6bd132ff3d57541dc31ce6eb2641a3e8c6d7625ebb2ca2152c0b39a180ebf",
+      "sourceSha256": "9300fd851b03d193c149a67c77c98ff142ee3831fdecf60834170f2d12010e2f",
       "fixes": [
         "dicom-handedness",
         "dicom-version",
@@ -32,7 +32,45 @@
         "start-handoff",
         "dicom-visit-counter"
       ],
-      "exampleFiles": 90
+      "exampleFiles": 90,
+      "codecs": {
+        "README.txt": "ca81b7acf9b5354b083aa3b9138bd09782918a21f91ecd68772ef5302fde1358",
+        "LICENSE-codec-charls.txt": "a9cc2e879aafe18f40cae21bd4b6c8b78d81ca2a09b103607d192000c04ad65f",
+        "LICENSE-codec-libjpeg-turbo-8bit.txt": "7e477f36769d3b3862c5bd10fbe68dc2fefdfe1f860ae5d7cd219b88af8324e6",
+        "LICENSE-codec-openjpeg.txt": "9deaa5213464d170b84f1472110223ebf689e416e22abc671669a5fea3992bc1",
+        "LICENSE-codec-openjph.txt": "a9cc2e879aafe18f40cae21bd4b6c8b78d81ca2a09b103607d192000c04ad65f",
+        "LICENSE-jpeg-lossless-decoder-js.txt": "35d89c5827cb1f9685ffc3fb6ebcc9532f75663554ed6efddadad95071bae5c9",
+        "charlswasm_decode.js": "c8ef100ac02552c692d59e60f61ab9dc84f355a62386d571e3db2c1046aa1f5a",
+        "charlswasm_decode.wasm": "7e3696ecffee534d7c188ff91790812710c0a267fcbf78620b19da6bc78979f4",
+        "libjpegturbowasm_decode.js": "e6470ee8af2280a12cd5b1963e1e3d3fa733676bbc79163b0c40122c6b9e1730",
+        "libjpegturbowasm_decode.wasm": "a8d104602540b9e7aeefeaac23af7380f40c5a3460291d40246a26783929a696",
+        "lossless-min.js": "7a50162e3ce1f1e45c6d45161918281f34079a223cc7329518a2aa89390e9658",
+        "openjpegwasm_decode.js": "8e6d4ea409ed817ee08aed0c440048616091781fce5b22b81c7cd850d80937b5",
+        "openjpegwasm_decode.wasm": "5aff4e65444480a402898fe7369a9d2bc77e8181f858fc0d10150b2dabf07dee",
+        "openjphjs.js": "56c1d1a35bbaec18911a1d6fd79c44b49d82765a9f8d44b3d1e5c82b41274da8",
+        "openjphjs.wasm": "4f5d495f3eacd36a9e5e04c51dd94d48fdf2222120b28b9b006869478e757a39"
+      }
+    },
+    "vessel-fsi": {
+      "source": "modules/vessel-fsi/vessel-fsi.html",
+      "sourceSha256": "1b5cc3bdc3a5557cde94cece8e4e486d6056bd55c65905297de3b86bdcb1c817",
+      "fixes": [
+        "fsi-version",
+        "fsi-notice",
+        "fsi-wording",
+        "fsi-visit-counter",
+        "start-steps"
+      ],
+      "example": {
+        "vessel-example.stl": "52101312292fe00f96aefb1e04be9e1d5f45b6a6ad43db77c7e282349b848d92"
+      },
+      "forgeflowBridge": {
+        "prep-wall-button.html": "8d215f30f9f2ae98ebba16a37870b5d202c5faa59da8fdb935802565be3daa20",
+        "prep-wall-handoff.html": "96a1ac57013636be2975a28b50200a97dcb172e66cd184284b2b7af034ff6718",
+        "solver-bridge.html": "9a678e79ec6dc302997cf701403469d8bedecd5d426a4d4dda4229f71dae3818",
+        "solver-note.html": "9835a8ef326fe1c7ef70402721babdb9dde80097b0ac22734c94ae5e0b527a6f",
+        "solver-wall-controls.html": "12f2517afd0d63938fd4c4d9ceaafa4b13377d80e258aa09256ccf40282c36a4"
+      }
     }
   },
   "fgtServer": {
@@ -55,20 +93,20 @@
       "bytes": 560
     },
     "CHANGELOG.md": {
-      "sha256": "dcfeb288a84ed2c67e653efa02e3122a27db6a3c7b8c20c574e2042c2321e3d9",
-      "bytes": 9454
+      "sha256": "2c7007a127a1b1eb74d02ed59226d5e1f4ac04bff6211d91adf7ccc2da4bc8d3",
+      "bytes": 12775
     },
     "CNAME": {
       "sha256": "3e47e0f00befc122fe89357ae646e3274bf9dcf4febfd9f022cdb2bdb9957989",
       "bytes": 19
     },
     "README.md": {
-      "sha256": "9f945bc574b97ff85f144f0eed0bf46595838cfc99f782730c5d04ea3bc4b08f",
+      "sha256": "3add0a9e8f2ee3ff12fc613c438381239794cdb209612dfbd0c24458bc252649",
       "bytes": 539
     },
     "app/dicom-extract.html": {
-      "sha256": "39886b8fe50e24c0837e65f1487a46e6fd3907644fe5d3ca4f5ca15c8270e3ce",
-      "bytes": 47276
+      "sha256": "228072e3abfa62013943db902778c6f3ac103c6576d992fdc1f9c3b503989fd3",
+      "bytes": 59895
     },
     "app/examples/cta-phantom/IM0001.dcm": {
       "sha256": "4bbd599aa8add2e66b38f9e82749e2ed5db00c20b2a455a7c942149985887c45",
@@ -434,13 +472,17 @@
       "sha256": "5d4b39ef65f975cb1ce8cc478080b883c4ab7d9f2f4df4e1834c3cd00e2f968b",
       "bytes": 1543
     },
+    "app/examples/vessel-example.stl": {
+      "sha256": "52101312292fe00f96aefb1e04be9e1d5f45b6a6ad43db77c7e282349b848d92",
+      "bytes": 2468784
+    },
     "app/index.html": {
-      "sha256": "e06de1322174f94a41cf22feef7b67004fa43db099ab682ed58759f7123321c6",
-      "bytes": 597912
+      "sha256": "7e33dc4649998ead2c5e4a4f2a82595bc2c7fe78552b91e38b37693b2d906570",
+      "bytes": 610602
     },
     "app/start.html": {
-      "sha256": "ddf1e95023bada4fe8e9d6ce355bef2776523e1f50d0f085724021d9beb6cf22",
-      "bytes": 21113
+      "sha256": "04bd6ad5281c4e13197f50bf48321a549918f28cdfc793b3d962ee95012aeef0",
+      "bytes": 21233
     },
     "app/vendor/THREE-LICENSE.txt": {
       "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
@@ -450,6 +492,66 @@
       "sha256": "7dddf7c5b8fd10ee654db8857d75d104b5557889aa5a91fc4ca545ea7c07062f",
       "bytes": 1081
     },
+    "app/vendor/dicom-codecs/LICENSE-codec-charls.txt": {
+      "sha256": "a9cc2e879aafe18f40cae21bd4b6c8b78d81ca2a09b103607d192000c04ad65f",
+      "bytes": 1068
+    },
+    "app/vendor/dicom-codecs/LICENSE-codec-libjpeg-turbo-8bit.txt": {
+      "sha256": "7e477f36769d3b3862c5bd10fbe68dc2fefdfe1f860ae5d7cd219b88af8324e6",
+      "bytes": 293
+    },
+    "app/vendor/dicom-codecs/LICENSE-codec-openjpeg.txt": {
+      "sha256": "9deaa5213464d170b84f1472110223ebf689e416e22abc671669a5fea3992bc1",
+      "bytes": 283
+    },
+    "app/vendor/dicom-codecs/LICENSE-codec-openjph.txt": {
+      "sha256": "a9cc2e879aafe18f40cae21bd4b6c8b78d81ca2a09b103607d192000c04ad65f",
+      "bytes": 1068
+    },
+    "app/vendor/dicom-codecs/LICENSE-jpeg-lossless-decoder-js.txt": {
+      "sha256": "35d89c5827cb1f9685ffc3fb6ebcc9532f75663554ed6efddadad95071bae5c9",
+      "bytes": 1054
+    },
+    "app/vendor/dicom-codecs/README.txt": {
+      "sha256": "ca81b7acf9b5354b083aa3b9138bd09782918a21f91ecd68772ef5302fde1358",
+      "bytes": 677
+    },
+    "app/vendor/dicom-codecs/charlswasm_decode.js": {
+      "sha256": "c8ef100ac02552c692d59e60f61ab9dc84f355a62386d571e3db2c1046aa1f5a",
+      "bytes": 53905
+    },
+    "app/vendor/dicom-codecs/charlswasm_decode.wasm": {
+      "sha256": "7e3696ecffee534d7c188ff91790812710c0a267fcbf78620b19da6bc78979f4",
+      "bytes": 145438
+    },
+    "app/vendor/dicom-codecs/libjpegturbowasm_decode.js": {
+      "sha256": "e6470ee8af2280a12cd5b1963e1e3d3fa733676bbc79163b0c40122c6b9e1730",
+      "bytes": 56736
+    },
+    "app/vendor/dicom-codecs/libjpegturbowasm_decode.wasm": {
+      "sha256": "a8d104602540b9e7aeefeaac23af7380f40c5a3460291d40246a26783929a696",
+      "bytes": 299002
+    },
+    "app/vendor/dicom-codecs/lossless-min.js": {
+      "sha256": "7a50162e3ce1f1e45c6d45161918281f34079a223cc7329518a2aa89390e9658",
+      "bytes": 14777
+    },
+    "app/vendor/dicom-codecs/openjpegwasm_decode.js": {
+      "sha256": "8e6d4ea409ed817ee08aed0c440048616091781fce5b22b81c7cd850d80937b5",
+      "bytes": 55759
+    },
+    "app/vendor/dicom-codecs/openjpegwasm_decode.wasm": {
+      "sha256": "5aff4e65444480a402898fe7369a9d2bc77e8181f858fc0d10150b2dabf07dee",
+      "bytes": 260334
+    },
+    "app/vendor/dicom-codecs/openjphjs.js": {
+      "sha256": "56c1d1a35bbaec18911a1d6fd79c44b49d82765a9f8d44b3d1e5c82b41274da8",
+      "bytes": 58074
+    },
+    "app/vendor/dicom-codecs/openjphjs.wasm": {
+      "sha256": "4f5d495f3eacd36a9e5e04c51dd94d48fdf2222120b28b9b006869478e757a39",
+      "bytes": 299948
+    },
     "app/vendor/three-r128.min.js": {
       "sha256": "9274bbcec8d96168626c732b5d31c775aa8cfb7eaa0599bec0c175908a2c1ce2",
       "bytes": 603445
@@ -458,9 +560,13 @@
       "sha256": "07a95e94084abcb4bcb1adec04fea06606aebf7f797badf45215562a7e439290",
       "bytes": 701356
     },
+    "app/vessel-fsi.html": {
+      "sha256": "cb87d28e473c6459676b98b66a22266b59d3ef1044b4d57b3b2658aaa5480109",
+      "bytes": 86744
+    },
     "app/vessel-prep.html": {
-      "sha256": "b467da8a4c733ac74ae53e3a651ee65813f1deb0cb4762780cd378cea98c6ee7",
-      "bytes": 120122
+      "sha256": "017fcf54f38cdb2f70d6c4655644bde8e705ac159a54ef7ed45a9eaacbae17d5",
+      "bytes": 121722
     },
     "assets/fonts/FONT-LICENSES.txt": {
       "sha256": "c9971b94056e43c2301a97e13093d8b88e9d6a117058cd7307780b83a98bac4c",
@@ -547,15 +653,15 @@
       "bytes": 4751842
     },
     "changelog.html": {
-      "sha256": "8464c54822d7c6bf55ed09d48131adc5695e88cc9c4c5e907e833f1440710819",
-      "bytes": 13843
+      "sha256": "72c34164d98dbe4c455c36cde4b248d400beebe6a5aa8fe46245c08fe903fb88",
+      "bytes": 17617
     },
     "community.html": {
-      "sha256": "0e858a7be010b8a1e0a23ef930a7f063f2379ee5c7ab8bed94a35dce3fe4fd7f",
+      "sha256": "d17576980784c2677825ec9aa8a469b1df7d84b5c1d5adc5b5b0c2aae9dcfd26",
       "bytes": 6355
     },
     "contact.html": {
-      "sha256": "7afed12402dc6b7809fca79cd35f179103ec1fd501371a96d4dd6ffebfcd601d",
+      "sha256": "cff2a68d82f58b8ba9c58c6a53869ed553ee5a9bc8174d5fc2054f0f05a1cfc0",
       "bytes": 4986
     },
     "favicon.svg": {
@@ -563,11 +669,11 @@
       "bytes": 8082
     },
     "index.html": {
-      "sha256": "3a16e22494850b3309532b09721d5704f90dfce4cbd8776ea14416770d2f86b1",
-      "bytes": 23726
+      "sha256": "bb4332be84e5f777e64392da613a813c50e405a80463c7a25d61508dc2326d65",
+      "bytes": 23855
     },
     "privacy.html": {
-      "sha256": "462b02971671ddb7e8290f0d15cfdd20d1642b6c214c6b11fd38765f38c91030",
+      "sha256": "191de8613cc350f9595ec82f8cfac9a8da69225d91d539818782d3261fc3b624",
       "bytes": 9772
     },
     "robots.txt": {
@@ -575,27 +681,27 @@
       "bytes": 39
     },
     "team.html": {
-      "sha256": "93f87b48bdeebf06042f706aeb495464a17c667b2a4d0b4f5e4c6dfdaef3a421",
+      "sha256": "b222197fe5fc768d500e7abb1e396334a3befea27b3877a9a7409cb9c70f2dfe",
       "bytes": 10766
     },
     "terms.html": {
-      "sha256": "a5215552e1201f1f8ea48119a185677f18e918c0e1a7d5dcefcb7b135f9c290d",
+      "sha256": "a0abb27f7195ba267e9075035d73aa686f6392a0360d6ff6755a6d327fb333f0",
       "bytes": 10213
     },
     "zh/community.html": {
-      "sha256": "42a6d88df49e386f98cde5b97367378bad938db4c18e860252c87273e1214d51",
+      "sha256": "bdacb19abd08867008fcb3bf33beb67f2aebf48fc9592c7a5068f375c138eebe",
       "bytes": 6584
     },
     "zh/contact.html": {
-      "sha256": "d06d8c44f8395d8ffa19f5d3f44122841e1f2666d0b7130a517e486431561a09",
+      "sha256": "bc55d0119507fd8409d13b9897498388dd0b387e801cd09c1e242475be010f77",
       "bytes": 5234
     },
     "zh/index.html": {
-      "sha256": "c39a3b1a8e861d99b06cee996750fa1b241e71f84411abf7a85323222aff7502",
-      "bytes": 23974
+      "sha256": "732d1c714cb7caf1c14151d30830069f146dab4fef15d99e327ef22b13d977bf",
+      "bytes": 24086
     },
     "zh/team.html": {
-      "sha256": "ba22b3c6e41dd2c1d2b55532e31c7fe720f289c43ba538d86426223f5f18eb37",
+      "sha256": "e6f75c2c94786912a224451fcd9dd45e9df78cec423fa5f4c1c35e482f5ccf87",
       "bytes": 10679
     }
   },

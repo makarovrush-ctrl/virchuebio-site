@@ -10,6 +10,33 @@ How versions are numbered:
 
 Every update that changes what the website shows gets a new version number and an entry here before it is published. Set the same number in `site-config.json` (`platform.version`). `tools/publish.mjs` refuses to publish if the two don't match, or if the content changed but the version didn't. See the README, "Versions and the changelog".
 
+## X 3.0 — 2026-11-22
+
+A new module, vessel wall motion, and DICOM extraction that reads compressed and multi-frame scans. Both built by Allan.
+
+### New
+
+- **Vessel wall motion** (`/app/vessel-fsi.html`, built by Allan). The vessel wall expands and recoils with each heartbeat. Blood flow is solved along the vessel's centrelines together with a compliant wall (two-way fluid–structure interaction). By default the wall follows the Holzapfel–Gasser–Ogden (HGO) model: two layers, media and adventitia, each reinforced by collagen fibres. A Mooney–Rivlin wall is also available. Wall presets: elastic artery, muscular artery, vein and rabbit carotid (published constants). Results show pressure and flow through the cycle, diameter change, pulse wave speed, compliance and mass balance, with a 3D view of the moving wall. Save the results as CSV, or the surface at any moment as STL. An example vessel is included.
+- **Three ways in.** "Simulate wall motion" in vessel preparation and in DICOM extraction sends the vessel straight over. In the flow solver, "Vessel wall" under the pulsatile settings can be Rigid (as before) or Compliant: Compliant takes the wall pressure from the 3D result (one-way) or from a coupled 1D flow model (two-way), and opens wall motion in a window over the solver.
+- **Compressed and multi-frame DICOM** (Allan). DICOM extraction now reads RLE, deflated and big-endian files, JPEG lossless, JPEG-LS, JPEG 2000, HTJ2K and JPEG baseline, as well as enhanced and legacy multi-frame files. The decoders load only when a scan needs them. Series without slice positions get a "Reverse slice order" button.
+- **DICOM inside the flow solver.** A DICOM series chosen or dropped in the flow solver opens DICOM extraction in a window over the solver. The extracted vessel is capped where the scan ends and loads straight into the solver.
+
+### Changed
+
+- The surface from DICOM extraction keeps the scan's patient coordinates (millimetres). Allan fixed the mirror image in his page, so the correction added when the site is built since X 2.0 is retired; publishing now only checks that his fix is in place.
+- The four-step bar is on the wall-motion page too, with Flow lit. The start page and the home page link to wall motion.
+- Wording on the wall-motion page now describes the HGO wall, which is the default. Some text still described only the earlier Mooney–Rivlin wall. The calculation is unchanged.
+
+### Checked before release
+
+- The example scan, and RLE and JPEG 2000 copies of it, give identical Hounsfield values and the same surface, with the aorta at the top and both iliac arteries at the bottom.
+- Wall motion on the example vessel settles in 12 cycles in about 10 seconds: 116/77 mmHg at the inlet against a 120/80 target (the page explains why), 6.4 % diameter change and 0.07 % mass balance. The hand-overs from vessel preparation, DICOM extraction and the flow solver all arrive.
+
+### Known limits
+
+- Wall motion averages the flow over each cross-section, so recirculation and wall-shear detail still come from the 3D solver. The wall is passive and purely elastic. The HGO presets are calibrated fits, not measured human tissue. With pressure from the 3D result the coupling is one-way: the 3D flow does not feel the wall move.
+- Research use only. Not a medical device.
+
 ## X 2.1 — 2026-11-21
 
 One front door: "Open VirchueBio X" now opens a start page that takes your scan, your STL or your saved case.
