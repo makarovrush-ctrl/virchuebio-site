@@ -12,11 +12,11 @@
 <main id="main">
 <section class="hero on-dark" aria-labelledby="page-title"><div class="wrap">
 <div>
-<p class="eyebrow"><i class="dot" aria-hidden="true"></i>VirchueBio X v2.0 <span>免费研究测试版 · <a href="../changelog.html">v2.0 更新内容（英文）</a></span></p>
-<h1 id="page-title">从血管几何，到<em>血栓洞察。</em></h1>
-<p class="lead">准备血管模型，模拟其中的血流，并找出血管壁上最容易受到促凝血作用力的部位。VirchueBio X 是悉尼大学团队开发的研究平台，可在浏览器中免费使用，其中的快速 CFD 模块 ForgeFlow 负责求解血流。</p>
-<div class="actions"><a class="button primary" href="../app/vessel-prep.html">准备血管模型 <span class="arrow" aria-hidden="true">→</span></a><a class="button" href="../app/index.html#demo">▶ 运行演示</a><a class="button" href="../app/index.html">打开 VirchueBio X</a></div>
-<p class="note">第一次使用？演示会在大约一分钟内，带一个内置示例从几何模型一路算到血栓数 Θ。使用自己的 STL 文件时，请从血管准备开始；使用 CT 或 MR 扫描时，请从 DICOM 血管提取开始。请在台式机或笔记本电脑上使用 Chrome 或 Edge 浏览器。<a href="#start">观看入门视频</a>。平台界面目前为英文。</p>
+<p class="eyebrow"><i class="dot" aria-hidden="true"></i>VirchueBio X v2.0.1 <span>免费研究测试版 · <a href="../changelog.html">v2.0.1 更新内容（英文）</a></span></p>
+<h1 id="page-title">从 CT 扫描，到<em>血栓洞察。</em></h1>
+<p class="lead">导入 CT 或 MR 血管造影（DICOM）：VirchueBio 自动提取血管，模拟其中的血流，并找出血管壁上最容易受到促凝血作用力的部位。已有血管表面模型？也可以直接载入 STL。VirchueBio X 是悉尼大学团队开发的研究平台，可在浏览器中免费使用，其中的快速 CFD 模块 ForgeFlow 负责求解血流。</p>
+<div class="actions"><a class="button primary" href="../app/dicom-extract.html">从 DICOM 扫描开始 <span class="arrow" aria-hidden="true">→</span></a><a class="button" href="../app/vessel-prep.html">载入 STL</a><a class="button" href="../app/index.html#demo">▶ 运行演示</a></div>
+<p class="note">第一次使用？演示会在大约一分钟内，带一个内置示例从几何模型一路算到血栓数 Θ。请在台式机或笔记本电脑上使用 Chrome 或 Edge 浏览器。<a href="#start">观看入门视频</a>。平台界面目前为英文。</p>
 </div>
 <figure class="flow-figure" role="img" aria-label="示意图：血液流经分叉血管，分叉处的血管壁受力最大。">
 <svg viewBox="-10 0 580 460" aria-hidden="true">
@@ -66,11 +66,12 @@
 </ul></div></section>
 
 <section class="section" aria-labelledby="what-title"><div class="wrap">
-<div class="section-head"><div><p class="eyebrow">平台功能</p><h2 id="what-title">一条流程：从几何模型到壁面受力</h2></div><p>分为三个阶段，每个阶段都有各自的检查，让您在分享结果之前就了解它的可信程度。</p></div>
+<div class="section-head"><div><p class="eyebrow">平台功能</p><h2 id="what-title">一条流程：从扫描影像到壁面受力</h2></div><p>分为四个阶段，每个阶段都有各自的检查，让您在分享结果之前就了解它的可信程度。</p></div>
 <div class="pillars">
-<article class="pillar"><span class="num">01 — 几何</span><svg viewBox="0 0 56 56" aria-hidden="true"><path d="M6 20h16c8 0 12-6 20-10M6 36h16c8 0 12 6 20 10M44 22c-6 1-10 4-13 6 3 2 7 5 13 6"/><path d="M6 15v26M44 5v10M44 41v10"/></svg><h3>准备血管</h3><p>导入流体管腔 STL 或带命名端盖的管腔，或从 CT 或 MR 血管造影扫描（DICOM）中提取血管。然后确认单位，检查每个开口，并指定入口和出口。</p></article>
-<article class="pillar"><span class="num">02 — 血流</span><svg viewBox="0 0 56 56" aria-hidden="true"><path d="M6 18c10 0 14 4 22 4s12-4 22-4M6 28h40M6 38c10 0 14-4 22-4s12 4 22 4"/><path d="M42 24l6 4-6 4"/></svg><h3>模拟血流</h3><p>设置流量和血液属性，按照针对患者血管的建议生成网格，然后运行血流模拟，实时查看进度和收敛检查。</p></article>
-<article class="pillar"><span class="num">03 — 血栓</span><svg viewBox="0 0 56 56" aria-hidden="true"><path d="M6 42c10-14 20-22 44-26"/><path d="M6 50c12-12 24-18 44-20" opacity=".45"/><circle cx="29" cy="27" r="10" opacity=".35"/><circle class="hot" cx="29" cy="27" r="3.5"/></svg><h3>探索血栓分布图</h3><p>在模拟血流的基础上计算团队提出的、基于力学的血栓指标，在三维视图中查看，并导出场数据、图表和病例记录。</p></article>
+<article class="pillar"><span class="num">01 — 扫描</span><svg viewBox="0 0 56 56" aria-hidden="true"><path d="M6 42l22 10 22-10-22-10z"/><path d="M6 30l22 10 22-10" opacity=".55"/><path d="M6 18l22 10 22-10L28 8z" opacity=".35"/><circle cx="28" cy="18" r="3.2"/></svg><h3>提取血管</h3><p>导入 CT 或 MR 血管造影序列（DICOM）。系统逐层识别血管，去除骨骼和器官，并以毫米为单位生成血管表面，全部在浏览器中完成。</p></article>
+<article class="pillar"><span class="num">02 — 几何</span><svg viewBox="0 0 56 56" aria-hidden="true"><path d="M6 20h16c8 0 12-6 20-10M6 36h16c8 0 12 6 20 10M44 22c-6 1-10 4-13 6 3 2 7 5 13 6"/><path d="M6 15v26M44 5v10M44 41v10"/></svg><h3>准备血管</h3><p>检查提取出的血管，或导入流体管腔 STL 或带命名端盖的管腔。然后确认单位，检查每个开口，并指定入口和出口。</p></article>
+<article class="pillar"><span class="num">03 — 血流</span><svg viewBox="0 0 56 56" aria-hidden="true"><path d="M6 18c10 0 14 4 22 4s12-4 22-4M6 28h40M6 38c10 0 14-4 22-4s12 4 22 4"/><path d="M42 24l6 4-6 4"/></svg><h3>模拟血流</h3><p>设置流量和血液属性，按照针对患者血管的建议生成网格，然后运行血流模拟，实时查看进度和收敛检查。</p></article>
+<article class="pillar"><span class="num">04 — 血栓</span><svg viewBox="0 0 56 56" aria-hidden="true"><path d="M6 42c10-14 20-22 44-26"/><path d="M6 50c12-12 24-18 44-20" opacity=".45"/><circle cx="29" cy="27" r="10" opacity=".35"/><circle class="hot" cx="29" cy="27" r="3.5"/></svg><h3>探索血栓分布图</h3><p>在模拟血流的基础上计算团队提出的、基于力学的血栓指标，在三维视图中查看，并导出场数据、图表和病例记录。</p></article>
 </div></div></section>
 
 <section class="section" id="start" aria-labelledby="start-title"><div class="wrap">
@@ -97,10 +98,10 @@
 <p class="st-live" aria-live="polite"></p>
 </div>
 <p class="st-foot">示意图：其中的血管、血流和 Θ 数值仅作演示。FGT 结果是依赖输入条件的探索性模型输出，不是临床预测。</p>
-<ol class="acts"><li data-act-card="0" class="active"><span class="n">01</span><h3>患者血管几何</h3><p>从患者的血管开始：一个从 CT 或 MRI 中分割得到的流体管腔 STL，并在血管准备时为入口和出口命名。</p></li><li data-act-card="1"><span class="n">02</span><h3>血液流入</h3><p>设置入流和血液属性。血液进入血管，在狭窄处加速，并在其后减速，形成回流。</p></li><li data-act-card="2"><span class="n">03</span><h3>ForgeFlow 快速 CFD</h3><p>ForgeFlow 为血管生成网格并求解血流，运行时显示进度和收敛情况。</p></li><li data-act-card="3"><span class="n">04</span><h3>血栓数 Θ 等 FGT 指标</h3><p>流场结果输入 FGT 模型，模型在血管壁上绘制血栓数 Θ 等指标的分布，并把高于参考值 Θ = 1 的部位标记为在给定条件下可能形成血栓的部位。</p></li></ol>
+<ol class="acts"><li data-act-card="0" class="active"><span class="n">01</span><h3>患者血管几何</h3><p>从患者的 CT 或 MR 血管造影开始：VirchueBio 从 DICOM 扫描中提取血管，也可以直接载入流体管腔 STL。在血管准备中为入口和出口命名。</p></li><li data-act-card="1"><span class="n">02</span><h3>血液流入</h3><p>设置入流和血液属性。血液进入血管，在狭窄处加速，并在其后减速，形成回流。</p></li><li data-act-card="2"><span class="n">03</span><h3>ForgeFlow 快速 CFD</h3><p>ForgeFlow 为血管生成网格并求解血流，运行时显示进度和收敛情况。</p></li><li data-act-card="3"><span class="n">04</span><h3>血栓数 Θ 等 FGT 指标</h3><p>流场结果输入 FGT 模型，模型在血管壁上绘制血栓数 Θ 等指标的分布，并把高于参考值 Θ = 1 的部位标记为在给定条件下可能形成血栓的部位。</p></li></ol>
 <div class="app-steps">
-<div class="app-steps-head"><div><p class="eyebrow">在应用中</p><h3>用六个步骤分析您自己的案例</h3></div><div class="actions"><a class="button primary" href="../app/vessel-prep.html">从第 1 步开始 <span class="arrow" aria-hidden="true">→</span></a><a class="button" href="../app/index.html#demo">▶ 运行演示</a></div></div>
-<ol><li><span class="n">01</span><div><h4>载入流体管腔</h4><p>把 STL、带命名端盖 STL 的管腔或其所在文件夹拖入血管准备页面，然后确认单位。从扫描影像开始？请先<a href="../app/dicom-extract.html">从 DICOM 中提取血管</a>。</p></div></li><li><span class="n">02</span><div><h4>检查每个开口</h4><p>检查识别出的开口，指定入口或出口，然后选择 <strong>Use in ForgeFlow</strong>。</p></div></li><li><span class="n">03</span><div><h4>设置流动参数</h4><p>以流量、平均流速或剪切率输入入口流动条件，并设置密度、黏度和边界条件。</p></div></li><li><span class="n">04</span><div><h4>生成网格</h4><p>按照网格建议操作，并检查几何模型和开口。</p></div></li><li><span class="n">05</span><div><h4>运行并检查血流</h4><p>观察进度和收敛情况；未收敛的流场会明确标记为探索性结果。</p></div></li><li><span class="n">06</span><div><h4>绘制血栓数 Θ</h4><p>在第一个结果面板中选择 Θ 的输入参数。Θ 在血管壁上计算并以三维显示；可以保存报告和壁面数值。</p></div></li></ol>
+<div class="app-steps-head"><div><p class="eyebrow">在应用中</p><h3>用六个步骤分析您自己的案例</h3></div><div class="actions"><a class="button primary" href="../app/dicom-extract.html">从第 1 步开始 <span class="arrow" aria-hidden="true">→</span></a><a class="button" href="../app/vessel-prep.html">载入 STL</a><a class="button" href="../app/index.html#demo">▶ 运行演示</a></div></div>
+<ol><li><span class="n">01</span><div><h4>从 DICOM 提取血管</h4><p>把 CT 或 MR 血管造影序列拖入<a href="../app/dicom-extract.html">DICOM 血管提取</a>页面，系统会以毫米为单位生成血管表面。已有 STL？可直接在血管准备中载入。</p></div></li><li><span class="n">02</span><div><h4>准备血管</h4><p>确认单位，检查识别出的开口并指定入口或出口，然后选择 <strong>Use in ForgeFlow</strong>。</p></div></li><li><span class="n">03</span><div><h4>设置流动参数</h4><p>以流量、平均流速或剪切率输入入口流动条件，并设置密度、黏度和边界条件。</p></div></li><li><span class="n">04</span><div><h4>生成网格</h4><p>按照网格建议操作，并检查几何模型和开口。</p></div></li><li><span class="n">05</span><div><h4>运行并检查血流</h4><p>观察进度和收敛情况；未收敛的流场会明确标记为探索性结果。</p></div></li><li><span class="n">06</span><div><h4>绘制血栓数 Θ</h4><p>在第一个结果面板中选择 Θ 的输入参数。Θ 在血管壁上计算并以三维显示；可以保存报告和壁面数值。</p></div></li></ol>
 </div>
 </div></section>
 <script src="../assets/story.js" defer></script>
@@ -127,7 +128,7 @@
 </main>
 <footer class="site-footer"><div class="wrap">
 <div class="about"><a class="brand" href="./index.html" aria-label="為楚生物科技（VirchueBio）首页"><svg viewBox="0 0 36 36" aria-hidden="true"><path d="M18 33V20M18 20 7 6M18 20 29 6"/><circle cx="18" cy="20" r="3.6"/></svg><span class="brand-word brand-zh"><span class="zh-name">為楚生物科技</span><span class="en-name">Virchue<small>Bio</small></span></span></a><p>悉尼大学团队开发的血流与血栓研究工具。</p></div>
-<div><h4>平台</h4><ul><li><a href="../app/vessel-prep.html">准备血管模型</a></li><li><a href="../app/dicom-extract.html">从 DICOM 扫描提取血管</a></li><li><a href="../app/index.html">打开 VirchueBio X v2.0</a></li><li><a href="./index.html#start">入门视频</a></li><li><a href="../changelog.html">更新日志（英文）</a></li></ul></div>
+<div><h4>平台</h4><ul><li><a href="../app/dicom-extract.html">从 DICOM 扫描提取血管</a></li><li><a href="../app/vessel-prep.html">准备血管模型</a></li><li><a href="../app/index.html">打开 VirchueBio X v2.0.1</a></li><li><a href="./index.html#start">入门视频</a></li><li><a href="../changelog.html">更新日志（英文）</a></li></ul></div>
 <div><h4>团队与社区</h4><ul><li><a href="./team.html">团队</a></li><li><a href="./community.html">社区论坛</a></li><li><a href="./contact.html">联系我们</a></li></ul></div>
 <div><h4>法律信息</h4><ul><li><a href="../privacy.html">隐私政策（英文）</a></li><li><a href="../terms.html">使用条款（英文）</a></li></ul></div>
 <div class="base"><span>© 2026 為楚生物科技 · VirchueBio</span><span>仅供研究使用 · 非医疗器械</span></div>
