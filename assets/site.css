@@ -369,3 +369,15 @@ html:lang(zh-Hans) .person .ack{font-style:normal;font-size:13.5px;line-height:1
 .pubs .eyebrow{margin-bottom:10px}
 .pubs .paper-cite{font-size:19px;margin:0}
 @media (max-width:1000px){.paper{grid-template-columns:1fr}}
+/* What's new (changelog.html, rendered from CHANGELOG.md by tools/changelog.mjs) */
+.changelog{padding-bottom:clamp(40px,6vw,80px)}
+.changelog .release{padding:clamp(36px,5vw,56px) 0;border-bottom:1px solid var(--line)}
+.changelog .release:last-child{border-bottom:0}
+.changelog .release header{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 18px;margin-bottom:14px}
+.changelog .release h2{margin:0;font-size:clamp(30px,3.4vw,42px)}
+.changelog .release header p{margin:0;font:500 12px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.changelog .tag{display:inline-block;margin-left:8px;padding:3px 8px;border-radius:999px;background:var(--teal);color:#fff;letter-spacing:.06em}
+.changelog .release>p{font-size:18px;color:var(--ink)}
+.changelog section{padding:0;border:0;margin-top:22px}
+.changelog section h3{margin:0 0 8px;font:500 11.5px/1.4 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--teal)}
+.changelog section ul{margin-bottom:0}
