@@ -1,13 +1,13 @@
 {
   "schema": "virchuebio-site-release/3",
-  "version": "2.0.2",
-  "publishedAt": "2026-11-21T11:25:40.053Z",
+  "version": "2.1",
+  "publishedAt": "2026-11-21T12:23:51.773Z",
   "mode": "public",
   "domain": "www.virchuebio.com",
   "changelog": {
-    "newest": "2.0.2",
+    "newest": "2.1",
     "date": "2026-11-21",
-    "sha256": "4e71f672155423467a8b00603076800de8e8595bb685c2e43ba816a1086676f4"
+    "sha256": "dcfeb288a84ed2c67e653efa02e3122a27db6a3c7b8c20c574e2042c2321e3d9"
   },
   "forgeflowBuild": {
     "sourceHashes": {
@@ -28,6 +28,8 @@
         "dicom-version",
         "dicom-notice",
         "dicom-voxel-size",
+        "start-steps",
+        "start-handoff",
         "dicom-visit-counter"
       ],
       "exampleFiles": 90
@@ -53,20 +55,20 @@
       "bytes": 560
     },
     "CHANGELOG.md": {
-      "sha256": "4e71f672155423467a8b00603076800de8e8595bb685c2e43ba816a1086676f4",
-      "bytes": 7615
+      "sha256": "dcfeb288a84ed2c67e653efa02e3122a27db6a3c7b8c20c574e2042c2321e3d9",
+      "bytes": 9454
     },
     "CNAME": {
       "sha256": "3e47e0f00befc122fe89357ae646e3274bf9dcf4febfd9f022cdb2bdb9957989",
       "bytes": 19
     },
     "README.md": {
-      "sha256": "19bb4a6fb6e1bc6bee80447ca59ec9b187b6f981b2cbc591a5b46bbdb0eb865e",
-      "bytes": 541
+      "sha256": "9f945bc574b97ff85f144f0eed0bf46595838cfc99f782730c5d04ea3bc4b08f",
+      "bytes": 539
     },
     "app/dicom-extract.html": {
-      "sha256": "a0afd3afdcd6f973c807b93e784fa79f223ef003d521426fa397529e606164c2",
-      "bytes": 43713
+      "sha256": "39886b8fe50e24c0837e65f1487a46e6fd3907644fe5d3ca4f5ca15c8270e3ce",
+      "bytes": 47276
     },
     "app/examples/cta-phantom/IM0001.dcm": {
       "sha256": "4bbd599aa8add2e66b38f9e82749e2ed5db00c20b2a455a7c942149985887c45",
@@ -433,8 +435,12 @@
       "bytes": 1543
     },
     "app/index.html": {
-      "sha256": "5be4e5078d7db671e517c052507763a1bb179bb5dc86576b95ff0f17c9e5fda2",
-      "bytes": 594173
+      "sha256": "e06de1322174f94a41cf22feef7b67004fa43db099ab682ed58759f7123321c6",
+      "bytes": 597912
+    },
+    "app/start.html": {
+      "sha256": "ddf1e95023bada4fe8e9d6ce355bef2776523e1f50d0f085724021d9beb6cf22",
+      "bytes": 21113
     },
     "app/vendor/THREE-LICENSE.txt": {
       "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
@@ -453,8 +459,8 @@
       "bytes": 701356
     },
     "app/vessel-prep.html": {
-      "sha256": "c3cc831cba00a90d23bca99032e16f10ad2b373843e3f3298ca9ec54d2f08157",
-      "bytes": 116792
+      "sha256": "b467da8a4c733ac74ae53e3a651ee65813f1deb0cb4762780cd378cea98c6ee7",
+      "bytes": 120122
     },
     "assets/fonts/FONT-LICENSES.txt": {
       "sha256": "c9971b94056e43c2301a97e13093d8b88e9d6a117058cd7307780b83a98bac4c",
@@ -533,64 +539,64 @@
       "bytes": 2350
     },
     "assets/workflow-poster.jpg": {
-      "sha256": "b103bea7ef16ecdcff0c1ee89c08a46d7b4a89c694742f5a80cc6c05a71c7a6d",
-      "bytes": 65570
+      "sha256": "a6112c10d2b2bd18708d01f442895310820b3c4c3631d0350de8cf4872b5a6bc",
+      "bytes": 71341
     },
     "assets/workflow.mp4": {
       "sha256": "34536262bf14aac6cfe118ec4550b6741b57d1870316095bfe60d84f08efd177",
       "bytes": 4751842
     },
     "changelog.html": {
-      "sha256": "17e587a7507ad47bd3bcbdfb68277d47dfebcb27b21b570934ffdb7d4a3ddbf0",
-      "bytes": 11627
+      "sha256": "8464c54822d7c6bf55ed09d48131adc5695e88cc9c4c5e907e833f1440710819",
+      "bytes": 13843
     },
     "community.html": {
-      "sha256": "6724ed99be9f648633b7276d25ae1b5782d28da75ae77023d3badb80e561cabb",
-      "bytes": 6357
+      "sha256": "0e858a7be010b8a1e0a23ef930a7f063f2379ee5c7ab8bed94a35dce3fe4fd7f",
+      "bytes": 6355
     },
     "contact.html": {
-      "sha256": "c004e1cdfb5433965d06ab855fea6270684d8d6caec6054e0fee8df4f1337134",
-      "bytes": 4988
+      "sha256": "7afed12402dc6b7809fca79cd35f179103ec1fd501371a96d4dd6ffebfcd601d",
+      "bytes": 4986
     },
     "favicon.svg": {
       "sha256": "c7734d95757ed800905d78d4b633e233455055796cb327e072ccf587c649d713",
       "bytes": 8082
     },
     "index.html": {
-      "sha256": "fd0d80d594506a07aaf727d3b58ca16c5c351855b981f2ec98c5244bdb668f2b",
-      "bytes": 23732
+      "sha256": "3a16e22494850b3309532b09721d5704f90dfce4cbd8776ea14416770d2f86b1",
+      "bytes": 23726
     },
     "privacy.html": {
-      "sha256": "7a62de3a2fd6c1a265fcf15d060ce4dc51cdecc43421dba7e905070278c8a742",
-      "bytes": 9774
+      "sha256": "462b02971671ddb7e8290f0d15cfdd20d1642b6c214c6b11fd38765f38c91030",
+      "bytes": 9772
     },
     "robots.txt": {
       "sha256": "17f15a556bbe026640db462476659d39c78639a926c6cc93410b3ce3ad710878",
       "bytes": 39
     },
     "team.html": {
-      "sha256": "d87400932e42c901abec14e34ac916b8adbefc31bf601a923b03b533a1d21dbc",
-      "bytes": 10768
+      "sha256": "93f87b48bdeebf06042f706aeb495464a17c667b2a4d0b4f5e4c6dfdaef3a421",
+      "bytes": 10766
     },
     "terms.html": {
-      "sha256": "e8faa03e9ab283972510f36fc06bebfada17a197f32204e3ab1a36f1b866d368",
-      "bytes": 10215
+      "sha256": "a5215552e1201f1f8ea48119a185677f18e918c0e1a7d5dcefcb7b135f9c290d",
+      "bytes": 10213
     },
     "zh/community.html": {
-      "sha256": "04b0bc2ac6e749ca10fa6be1791fd576af393d79793f500b115eba649986a44f",
-      "bytes": 6586
+      "sha256": "42a6d88df49e386f98cde5b97367378bad938db4c18e860252c87273e1214d51",
+      "bytes": 6584
     },
     "zh/contact.html": {
-      "sha256": "78e4971f6b5e8d321a3d6b7028f9eb51337c351f474dc2f2b2b3e58fc325565a",
-      "bytes": 5236
+      "sha256": "d06d8c44f8395d8ffa19f5d3f44122841e1f2666d0b7130a517e486431561a09",
+      "bytes": 5234
     },
     "zh/index.html": {
-      "sha256": "2c82df47198264b13442c5a0bdb047af3a76d0a5771d7b275dce110682b9f448",
-      "bytes": 23980
+      "sha256": "c39a3b1a8e861d99b06cee996750fa1b241e71f84411abf7a85323222aff7502",
+      "bytes": 23974
     },
     "zh/team.html": {
-      "sha256": "186b57bc062acfb45d2ad5029ddd75b948d6a7a9158fdc4e0034562ae1983b4b",
-      "bytes": 10681
+      "sha256": "ba22b3c6e41dd2c1d2b55532e31c7fe720f289c43ba538d86426223f5f18eb37",
+      "bytes": 10679
     }
   },
   "wrapper": "Public pages from pages/. App pages hardened by tools/harden.mjs: method panels and manuscript provenance replaced, code minified, comments removed.",

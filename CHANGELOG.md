@@ -10,6 +10,24 @@ How versions are numbered:
 
 Every update that changes what the website shows gets a new version number and an entry here before it is published. Set the same number in `site-config.json` (`platform.version`). `tools/publish.mjs` refuses to publish if the two don't match, or if the content changed but the version didn't. See the README, "Versions and the changelog".
 
+## X 2.1 — 2026-11-21
+
+One front door: "Open VirchueBio X" now opens a start page that takes your scan, your STL or your saved case.
+
+### New
+
+- **Start page.** "Open VirchueBio X" (top of every page and in the footer) opens a start page instead of going straight to the flow solver. Drop a CT or MR scan (a folder of DICOM slices), an STL or a saved case, and the page recognises it and opens the stage it belongs to: DICOM extraction, vessel preparation or the flow solver. If a drop holds both a scan and an STL, it asks which one to open. The files are read in your browser and are not uploaded. Under the drop zone, four cards open each stage directly.
+- **Four-step bar.** Scan, Prepare, Flow and Thrombosis now appear at the top of every stage (in the header, or in a thin strip under it in the flow solver) and on the start page, so you can see where you are and move between stages. On narrow screens the bar is hidden; the start page has the same four stages as cards. The VirchueBio name in the DICOM and vessel-preparation headers now returns to the start page.
+
+### Changed
+
+- Each stage keeps its own file chooser and works on its own as before. The stages remain separate pages: the start page only recognises the file and passes it on (`tools/start.mjs`). The ForgeFlow build and the DICOM module are not edited; the hand-over and the bar are added when the site is built.
+- The home page's "Start from a DICOM scan", "Load an STL" and "Run the demo" buttons still go straight to their stage.
+
+### Record
+
+- X 2.0.2's release record lists the original poster image for the workflow video. The poster that was uploaded was re-encoded on the way (same picture, 71,341 bytes instead of the original), so one file's hash differed from that record. This version's record carries the hash of the file that is actually served.
+
 ## X 2.0.2 — 2026-11-21
 
 The home page now has a one-minute video of the whole workflow.
