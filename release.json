@@ -1,13 +1,13 @@
 {
   "schema": "virchuebio-site-release/3",
-  "version": "2.0",
-  "publishedAt": "2026-11-21T04:21:25.160Z",
+  "version": "2.0.1",
+  "publishedAt": "2026-11-21T08:57:01.354Z",
   "mode": "public",
   "domain": "www.virchuebio.com",
   "changelog": {
-    "newest": "2.0",
+    "newest": "2.0.1",
     "date": "2026-11-21",
-    "sha256": "5f0f7c1e0c2fe2d3fd52a706b5af70b58610ae86a835fab6ac4645c0d13e24bb"
+    "sha256": "adda12724a5a4f3d7b3335ff5abc98907c90310695c46b753b821a2d171459d3"
   },
   "forgeflowBuild": {
     "sourceHashes": {
@@ -53,20 +53,20 @@
       "bytes": 560
     },
     "CHANGELOG.md": {
-      "sha256": "5f0f7c1e0c2fe2d3fd52a706b5af70b58610ae86a835fab6ac4645c0d13e24bb",
-      "bytes": 6154
+      "sha256": "adda12724a5a4f3d7b3335ff5abc98907c90310695c46b753b821a2d171459d3",
+      "bytes": 6958
     },
     "CNAME": {
       "sha256": "3e47e0f00befc122fe89357ae646e3274bf9dcf4febfd9f022cdb2bdb9957989",
       "bytes": 19
     },
     "README.md": {
-      "sha256": "d5d22af4ec18860ef119420ee8c789a5966c574d73eab7b311c207eae950cff1",
-      "bytes": 539
+      "sha256": "9e47c8322e4760ca49f9899b976f57be192044563a2f5fb71b07dae9c16e0b5f",
+      "bytes": 541
     },
     "app/dicom-extract.html": {
-      "sha256": "3b0d95a1200f74b14778a12585d6f7154888ca23b799450fbc6bd0bc67db6a2d",
-      "bytes": 43707
+      "sha256": "3d38122e70ae3fe526e392cfb1566d048d779f053bdbab83e405543aa90e020b",
+      "bytes": 43713
     },
     "app/examples/cta-phantom/IM0001.dcm": {
       "sha256": "4bbd599aa8add2e66b38f9e82749e2ed5db00c20b2a455a7c942149985887c45",
@@ -433,8 +433,8 @@
       "bytes": 1543
     },
     "app/index.html": {
-      "sha256": "2e0a11a9810af1510615249656f679acf927e5a89eb2b1e21195e93d375fb7a0",
-      "bytes": 594163
+      "sha256": "610a8122e5113646e0c2eeb408d086cefa7a33e9cc7b96ed62e40dea0798e127",
+      "bytes": 594173
     },
     "app/vendor/THREE-LICENSE.txt": {
       "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
@@ -453,8 +453,8 @@
       "bytes": 701356
     },
     "app/vessel-prep.html": {
-      "sha256": "e3f47d86acd11550b70428a91247e58e4de862954c0bded441879ef6f93803a8",
-      "bytes": 116784
+      "sha256": "70054a4c987d9658d1f0a6c0334438f7ce25ce5cfc992959979a41b7a0f67481",
+      "bytes": 116792
     },
     "assets/fonts/FONT-LICENSES.txt": {
       "sha256": "c9971b94056e43c2301a97e13093d8b88e9d6a117058cd7307780b83a98bac4c",
@@ -501,7 +501,7 @@
       "bytes": 7065657
     },
     "assets/site.css": {
-      "sha256": "d737047830b5c6876f98969577a6e2db34f6f90724504ce25de24bc67717495e",
+      "sha256": "79348115977c5c061c31f808c7547f67277c010f8c54445c76963fea9dc64aee",
       "bytes": 31086
     },
     "assets/story.js": {
@@ -533,56 +533,56 @@
       "bytes": 2350
     },
     "changelog.html": {
-      "sha256": "032e38e12e5e82fda82100da983e7e4a0e0b3d50349db28843a7287eeef4819b",
-      "bytes": 9551
+      "sha256": "1aaee0e47ba4d9bee3098349e0643d58f2bd2e2da4dd3ae691e572918312a29c",
+      "bytes": 10722
     },
     "community.html": {
-      "sha256": "57e69909f6ac0bb16220a3c70dfcd7bb3998984c540e81fc0431aee0a1c4cb4f",
-      "bytes": 6355
+      "sha256": "4128cdf7e0c7ec73b7733392ffcce267fa4acae2bf089636838c4f4a49d07285",
+      "bytes": 6357
     },
     "contact.html": {
-      "sha256": "48e1613f051e88d6f5fa5518c5e311b6a10b7f49d3f1ace991adf0b3852e77c9",
-      "bytes": 4986
+      "sha256": "ffa02a49c7f5542add4e02d7b3a54b2ba0bfedf1f5ffc5dee7e67dec726edba3",
+      "bytes": 4988
     },
     "favicon.svg": {
       "sha256": "c7734d95757ed800905d78d4b633e233455055796cb327e072ccf587c649d713",
       "bytes": 8082
     },
     "index.html": {
-      "sha256": "644ed9804bc586ba2c0bd83e35fc79f2fe318523e0ea5e97581f1abbd0648422",
-      "bytes": 21961
+      "sha256": "5dc7cb54236960f92c4d7ee9be91de663e6acf02b9d93c8874ff9db4d73b59d3",
+      "bytes": 22574
     },
     "privacy.html": {
-      "sha256": "e271f9461f082b240012fd82aa37ff5edd65fd097e438e2f1b8aeaacc41baaa0",
-      "bytes": 9772
+      "sha256": "d818ca87b5ab0a5b06a5036a80b0698a0e15fdac9e4eac9b82b92b5c25071bb6",
+      "bytes": 9774
     },
     "robots.txt": {
       "sha256": "17f15a556bbe026640db462476659d39c78639a926c6cc93410b3ce3ad710878",
       "bytes": 39
     },
     "team.html": {
-      "sha256": "9a230600e8f4707364ef4c18e62b832599bfbedbc7c885fea9426bbe838ff838",
-      "bytes": 10766
+      "sha256": "87ed318d5b6432090e96db3fd6caa5f45da613964e141b35ae12d5698256247a",
+      "bytes": 10768
     },
     "terms.html": {
-      "sha256": "542d7b7a8906895a3f9c5fa0c914125a9d335a4c1dd091d72e67328d78fd9818",
-      "bytes": 10213
+      "sha256": "398550b633e3aab9e9483348d507970f123c6b984e1ba268025975ef3a25ef51",
+      "bytes": 10215
     },
     "zh/community.html": {
-      "sha256": "4a6e72cdbf2bd2608aa3ffbaa245db0c799ede6d9a6adb50d9825a7c60a6a764",
-      "bytes": 6584
+      "sha256": "b9fb5333c8b1a1176553cadf7c06eb7e29a4b35c48e05001b9438425a35bd920",
+      "bytes": 6586
     },
     "zh/contact.html": {
-      "sha256": "c336ec406c8749e6649cef2f02e1e8f814b65072a41cd0e370855f7f48cfbf9d",
-      "bytes": 5234
+      "sha256": "026854265e719643f8715d74d4a63be873544820a4d18d2bf394f152cee45792",
+      "bytes": 5236
     },
     "zh/index.html": {
-      "sha256": "5f0c63af00bf359b9465e79e33e5b575e436d3c92016d4988e6c2ef708cc2632",
-      "bytes": 22345
+      "sha256": "d6017043b413ea53a2fb05b42148be9c55fe13b3627617d7aba6cd7faa84d7ec",
+      "bytes": 22904
     },
     "zh/team.html": {
-      "sha256": "f7ab91be2902fcc7e3c763bfa8918eded936a8bd141d283820309a9567a005f2",
-      "bytes": 10679
+      "sha256": "3154ffc4a54dcfaae20575eaf04edc046955b4db690e8493d471082e612d485e",
+      "bytes": 10681
     }
   },
   "wrapper": "Public pages from pages/. App pages hardened by tools/harden.mjs: method panels and manuscript provenance replaced, code minified, comments removed.",

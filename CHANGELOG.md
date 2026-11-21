@@ -10,6 +10,17 @@ How versions are numbered:
 
 Every update that changes what the website shows gets a new version number and an entry here before it is published. Set the same number in `site-config.json` (`platform.version`). `tools/publish.mjs` refuses to publish if the two don't match, or if the content changed but the version didn't. See the README, "Versions and the changelog".
 
+## X 2.0.1 — 2026-11-21
+
+The home page now starts from a scan.
+
+### Website
+
+- **DICOM first.** The home page headline is now "From a CT scan to thrombosis insight", and its main button, "Start from a DICOM scan", opens DICOM vessel extraction. "Load an STL" stays next to it for anyone who already has a vessel surface.
+- **Four stages instead of three.** "What the platform does" now starts with "Extract the vessel" (DICOM), followed by preparing the vessel, simulating blood flow and the thrombosis maps.
+- **Six steps for your own case** now start with extracting the vessel from DICOM; step 2 prepares the vessel and its openings. "Patient geometry" in "How it works" says the same.
+- The footer lists "Vessel from a DICOM scan" before "Prepare a vessel". The Chinese pages say all of this too.
+
 ## X 2.0 — 2026-11-21
 
 Vessels straight from CT and MR angiography scans.
