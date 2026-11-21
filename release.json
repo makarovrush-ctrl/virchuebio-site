@@ -1,8 +1,14 @@
 {
-  "schema": "virchuebio-site-release/2",
-  "publishedAt": "2026-11-20T23:25:25.416Z",
+  "schema": "virchuebio-site-release/3",
+  "version": "2.0",
+  "publishedAt": "2026-11-21T04:21:25.160Z",
   "mode": "public",
   "domain": "www.virchuebio.com",
+  "changelog": {
+    "newest": "2.0",
+    "date": "2026-11-21",
+    "sha256": "5f0f7c1e0c2fe2d3fd52a706b5af70b58610ae86a835fab6ac4645c0d13e24bb"
+  },
   "forgeflowBuild": {
     "sourceHashes": {
       "index.html": "c2e3ebea9b6444d8f145945b64e540f594ecff4b3cf8ea3e87168621081c5dc9",
@@ -11,6 +17,20 @@
       "vendor/THREE-r128-LICENSE.txt": "7dddf7c5b8fd10ee654db8857d75d104b5557889aa5a91fc4ca545ea7c07062f",
       "vendor/three.min.js": "07a95e94084abcb4bcb1adec04fea06606aebf7f797badf45215562a7e439290",
       "vendor/THREE-LICENSE.txt": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601"
+    }
+  },
+  "modules": {
+    "dicom-extract": {
+      "source": "modules/dicom-extract/dicom-extract.html",
+      "sourceSha256": "2aa6bd132ff3d57541dc31ce6eb2641a3e8c6d7625ebb2ca2152c0b39a180ebf",
+      "fixes": [
+        "dicom-handedness",
+        "dicom-version",
+        "dicom-notice",
+        "dicom-voxel-size",
+        "dicom-visit-counter"
+      ],
+      "exampleFiles": 90
     }
   },
   "fgtServer": {
@@ -32,12 +52,388 @@
       "sha256": "ac03ad01b3e3200fb56a8d609483e027d55f37e749cde73690c683327b4a97c4",
       "bytes": 560
     },
+    "CHANGELOG.md": {
+      "sha256": "5f0f7c1e0c2fe2d3fd52a706b5af70b58610ae86a835fab6ac4645c0d13e24bb",
+      "bytes": 6154
+    },
     "CNAME": {
       "sha256": "3e47e0f00befc122fe89357ae646e3274bf9dcf4febfd9f022cdb2bdb9957989",
       "bytes": 19
     },
+    "README.md": {
+      "sha256": "d5d22af4ec18860ef119420ee8c789a5966c574d73eab7b311c207eae950cff1",
+      "bytes": 539
+    },
+    "app/dicom-extract.html": {
+      "sha256": "3b0d95a1200f74b14778a12585d6f7154888ca23b799450fbc6bd0bc67db6a2d",
+      "bytes": 43707
+    },
+    "app/examples/cta-phantom/IM0001.dcm": {
+      "sha256": "4bbd599aa8add2e66b38f9e82749e2ed5db00c20b2a455a7c942149985887c45",
+      "bytes": 132160
+    },
+    "app/examples/cta-phantom/IM0002.dcm": {
+      "sha256": "d647ce08f83f7f291f070bb7479805850d183b92fa1d66d0109ce72c0c79911d",
+      "bytes": 132160
+    },
+    "app/examples/cta-phantom/IM0003.dcm": {
+      "sha256": "9c7eabc4ef0fdc4e6e712b88ba1aeb2475fb746e9ffa677c4ad5408c10c0ef94",
+      "bytes": 132160
+    },
+    "app/examples/cta-phantom/IM0004.dcm": {
+      "sha256": "5e2a7f0d2deba8a706d7ba89c205e80c76143aee42dd94d5d62f05a51ece79cf",
+      "bytes": 132160
+    },
+    "app/examples/cta-phantom/IM0005.dcm": {
+      "sha256": "57343dfd87bdd5777dff467de478d172e0f5f3cc2227fed8f609e10425afc35d",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0006.dcm": {
+      "sha256": "05e5155db62baf9b9cd872f93ec146377faa9e209d9dabcf1651f79a019cfd0e",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0007.dcm": {
+      "sha256": "09dbb0e686767cfa3f9b22b878738b1e16633f40b7121c25e727af11063ee477",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0008.dcm": {
+      "sha256": "7ea8e8aabe89ad562816ebdc64cceac3667a0c53b4ab65562a2f092a144ec1a4",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0009.dcm": {
+      "sha256": "c7a5fc551b545c17a42ee92cd893fb1fa7e1e664e4c53349c295046ddcfb8db1",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0010.dcm": {
+      "sha256": "c8a91a2b91a3e6019373a11bdb09b441b3f529d9ef8f6b3adfce7408b7c1e923",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0011.dcm": {
+      "sha256": "1819e5a70494e054e151c5383d8e25f61d3fd799d1a186a5e5f4a126a629580d",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0012.dcm": {
+      "sha256": "8186fd940f0f20903f1d8c3d462a5b89dd8568740da92a796cab4ec6258df1dc",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0013.dcm": {
+      "sha256": "e8d662e650baa7c9d538e7a27281ad82fea08f06734924ccafb3daaac3a5e9c4",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0014.dcm": {
+      "sha256": "3ae4c0d6d6f641426e83ec6677fcc9438b97e606ca0728b67680e5e720dd0d3f",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0015.dcm": {
+      "sha256": "9a36631418ea0b0f8c471ec80b902da14b94d4b9c84f42628206718a10f1b721",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0016.dcm": {
+      "sha256": "3c5086d206e2d45d3c41e926e530d8cb87f3433a91b80eec068ae0f9e14cb5df",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0017.dcm": {
+      "sha256": "fcab4514b52609b3f13d44ec351d6bff4291a696ed4401dce07eef463ce3222a",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0018.dcm": {
+      "sha256": "5a21f25658c106d37755cf23daaec1d0d44b01516fa25099f9b47ba7258663d9",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0019.dcm": {
+      "sha256": "f6af3e291aa39ae0ae29dce368b55841cf2c3ff43023192f7020101b1aca3c6c",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0020.dcm": {
+      "sha256": "9652143c1dcce4c5a503cd66686245f45f181ae8d44e659e02efbc0dd41e09ef",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0021.dcm": {
+      "sha256": "7eeae4925c7eae85b52f440170d819d207b96513f6f2785078e7f694d06f7152",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0022.dcm": {
+      "sha256": "156b0e99b8156ff5d24b8c651110b07f7f9d0bf9c6e153ea883402b4b5e8577a",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0023.dcm": {
+      "sha256": "cfc634821198cce7ddc6a92c2f8e4858ba78c10fb9770d71b638165d3728e256",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0024.dcm": {
+      "sha256": "7eae3b111e819d022e467aa967a09ebdda9731e91d259fefffca8bf2da435b0f",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0025.dcm": {
+      "sha256": "b87d24bb44fc85cddb1fd88d63ee9601e15181721b20781df658f3ac847ff3ca",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0026.dcm": {
+      "sha256": "1ced0cc1316046d6e1e26a619427be415b665d8145d97602d46303b620fa0db9",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0027.dcm": {
+      "sha256": "77caecb99d35ec2c488966608da6c38612fe4555013b6527899dc7811954445d",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0028.dcm": {
+      "sha256": "66301d18971c8f442d0106d03a17454236a5755f9a522dfca93510d98a8ec1f5",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0029.dcm": {
+      "sha256": "ef7984ddc3e7cafc003d36b03e3123a33f2d8319cdabb604d2f26e2d111a05a9",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0030.dcm": {
+      "sha256": "23e89ca45d3a90bbfe4e70b954ab50d3712bf2aa2c49cd1a7a14da15b0587e8d",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0031.dcm": {
+      "sha256": "3ab76c97a7d85d4dfcdb80f7e10e5bbe4ac99bfb27ae4aa004eb6b9d0f85329f",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0032.dcm": {
+      "sha256": "04ba8f245fdb95f18922ebff1e569d0a3fe6fd389aff9063345f7b0ee195b762",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0033.dcm": {
+      "sha256": "9ec3d70e364464abb467a032f781a3edb285f9c2e91966a26f42c552249d3194",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0034.dcm": {
+      "sha256": "14bae4da83bff77f8bdffe0cddf3e5dd6e6cda9cbc07b4ab85e1cfded763618f",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0035.dcm": {
+      "sha256": "8d390c68c15b86fab816865d1a5fe6f44ffbf8668d321ea0e7d206b158e1bf94",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0036.dcm": {
+      "sha256": "171eda9cb72f78e64fcce4e730b8e648dcd64901a73c72ff27df21b4a81f1150",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0037.dcm": {
+      "sha256": "940b60c052f672bb2e3b91d84d7ad1b33596605dfb7fd5f86e5e73b2b46ea252",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0038.dcm": {
+      "sha256": "c863bf75829dd0e432b7a2f44aba0d3db1df81673acac3ae830f199e7fa6c5cd",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0039.dcm": {
+      "sha256": "5d9c7186198b362f7713d950726548766135b0f4d6aa6dbe001a586ed19a201e",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0040.dcm": {
+      "sha256": "fa74026e4532642ca0842ff94cf99d57e4b3e528017ac14a22381fbfd1382d85",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0041.dcm": {
+      "sha256": "c6cce672bb2262a5a49fdb852439e701cb7b37495124eca4e05eab20e24ca499",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0042.dcm": {
+      "sha256": "af41edb275eb613a2549c337b2de3d197706248679005e5315a492b5ca19eb39",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0043.dcm": {
+      "sha256": "2bed82519cfbe4e273b9474fd306f2d21f1224bfe69c0108ea446dc063e6f410",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0044.dcm": {
+      "sha256": "9ff16603c2bd9069d477a13887166bb4df6bb3216c39cfbb100f3214c73fe1ff",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0045.dcm": {
+      "sha256": "6b188cc96d3d372e13c3976ce9d474dd4328467a8515b7209c88c5b0695bed59",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0046.dcm": {
+      "sha256": "53301353f5e56b06cf5786402e6dde906cc644c187c981968fc2d16b2c21b166",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0047.dcm": {
+      "sha256": "70da0676ac76a2a972a96081715af300b02189c90ef9cc8b2db422bed96929c8",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0048.dcm": {
+      "sha256": "4ce8b84ca84e9959e45e4166dbfd68f0298dc25e8fb29f806e9bd078b3bd69c0",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0049.dcm": {
+      "sha256": "dd5ad51c98bda696bfc77f71a25377bf20d15743b5cefcb6a28fb3121da73661",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0050.dcm": {
+      "sha256": "b60cacefd647fe06329010ce70b5a1015f8cfef5d40ed8ee2e72a7aadf0d831e",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0051.dcm": {
+      "sha256": "4ce05005011d380c912f910a4a7fd06a819c962d44480988c50fa877bce8549b",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0052.dcm": {
+      "sha256": "e9bfd867724da68b18395a6c5839d2c51ddd73db37cdaa55dd073eab837e86c1",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0053.dcm": {
+      "sha256": "9ad7524a7c1c319ecb860c2e9af488f2ffb85b5d416ed4933fd11ab0d559212b",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0054.dcm": {
+      "sha256": "861359fd57e83279997c8ca48477bd418bb08975203d632f19fbd1a289813a09",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0055.dcm": {
+      "sha256": "8eadf4e5c6ddfdf2a90596ac8e23501cfb6e847defc394cb9a5a7b6e37f53dce",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0056.dcm": {
+      "sha256": "c7d3440d9e210fc164b750fa47fac725bd8fc8c3fc2f012ec132807a6165d7de",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0057.dcm": {
+      "sha256": "6200d14ff0bd2d07d379b159d98ad92120f36e0bc1520123124cc84b70635080",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0058.dcm": {
+      "sha256": "4f2546e20686b3f2f9a7c806c64db8776c5d8a006c45f025c39c4678d39efc3f",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0059.dcm": {
+      "sha256": "f920225ac70a9c60e4ad73fcbf2f031fde2e71daf98021dd0665a3bfff017dc3",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0060.dcm": {
+      "sha256": "342981d2ce5a76d706a0d4acad2a79bb756d55951513fe4a53c56b7dd4e83b46",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0061.dcm": {
+      "sha256": "3110490fa8c8424d93eceda8d76118f2245c3a1dc7892b29ab1ba38b250ff26d",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0062.dcm": {
+      "sha256": "1736ddbec4f28bbba1b90cc1849b0056ae0187a3b9b65d31c2ad1e8d096f0ae9",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0063.dcm": {
+      "sha256": "f21ae531fef136d6dc3313a179c35fa7574cec8c6ccad3be9873328fc1daea60",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0064.dcm": {
+      "sha256": "683894d48a8fbb246ba5ed982ec6493d4353240b5b413e0f6b557e9e442a4cfa",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0065.dcm": {
+      "sha256": "b53d945685badd56d4f0c97a5d91e12e6b667a6718ab256590761b4a8bc7321e",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0066.dcm": {
+      "sha256": "bac964366b7830aa26688c2280f1feb1abf2ea3c3efa91aec2260e9aad4c6f09",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0067.dcm": {
+      "sha256": "6cf15de8273aac4ae3cbd6078f3de9d5915995a6dcaec68b24f8a71829241445",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0068.dcm": {
+      "sha256": "6026d52daeeb0bdf236023bdf27c796d3088172faa464b503738a61b2add5b20",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0069.dcm": {
+      "sha256": "bec445b22c3b676f085e9d0b322b7b91efb12247dc76b1f8d1aada47f0cc56d9",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0070.dcm": {
+      "sha256": "0155e5c39f660e24e57188c2fedcc2bdf5f04e2e48a91d5d9ba3093ebff60213",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0071.dcm": {
+      "sha256": "f0cf2a5483cd3a649dd039437fc098b9199add1215565554cd3a32249260a160",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0072.dcm": {
+      "sha256": "e825bac23a495ea7c78fbf7a863ab67d0d5e9c318b06c303262d9c5f50268562",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0073.dcm": {
+      "sha256": "1c80581e1d7e1e69c1689c693f26b308abd0751eac39c1cff76a235c6c55dd45",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0074.dcm": {
+      "sha256": "b976be2ec3d1e1e113c2e1e4fbbc80af8c133ba828b9c9eb09b053811a2f211c",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0075.dcm": {
+      "sha256": "c121c3f8dcd848ccea443a0e32e24912b20a31d82aecc568b741e09755ebcea6",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0076.dcm": {
+      "sha256": "93c44675a66886b15d555abf53a0ebed78fad215ddf788b92ed5e49a0a50a6aa",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0077.dcm": {
+      "sha256": "8b24b58fb086d425d8903e2c40298f2c02d6537ba639c4844488245a49e69a47",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0078.dcm": {
+      "sha256": "f38d7c12641f4485d2c5961463e229893bca4f9b3dad8fa319f2802203a3fa1c",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0079.dcm": {
+      "sha256": "4eeb3b4ea7eeb0d3a5d4eee06cc4029aa326e705bf6cdfaa487e55841ef27f42",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0080.dcm": {
+      "sha256": "f297806626f2247141926cf302f673d6e32605d58a3c0dab69c60eb471c5ea3d",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0081.dcm": {
+      "sha256": "898d16e139b7545d979f2d16810a7e4114c3858bb390be1f4a67570b03da8b0e",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0082.dcm": {
+      "sha256": "3e26f680abaa1a3644d00ba211dc94ffe9c7887cacbc0d63904415060b382b23",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0083.dcm": {
+      "sha256": "58465b2534da2918d373c43dcece5303478dfc36ae6d3ddae61353f10f1b7e64",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0084.dcm": {
+      "sha256": "9cd0349d96b102f84af73c1cf2d34d9ec3b7118901c8164ab61f117c68b7f153",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0085.dcm": {
+      "sha256": "76be72166e934f60abc782ff23ce3895c3baf7d80a0384192d9e2af6a0bb1434",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0086.dcm": {
+      "sha256": "d3e7d11b793a7f1ea3f498e415c1340e6992e5da280a31ee32f2f6b2cf89991f",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0087.dcm": {
+      "sha256": "8385bc67d781603a5a9f6f0b5dd6f56a627a5d7d8805f7c03e4910afd33bc27d",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0088.dcm": {
+      "sha256": "16c77d739daa8386c58f52f33ca7ada2e80ed3556d682dde0c02441e93f84d17",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0089.dcm": {
+      "sha256": "d9ed7693c441b513253680124a984d7fa1308a007761692d7332f9a0c11aac6b",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/IM0090.dcm": {
+      "sha256": "00e35f24ea4780fdea4677393e46b4d1312fc1bdf95af45d3466d98ae520121f",
+      "bytes": 132164
+    },
+    "app/examples/cta-phantom/index.json": {
+      "sha256": "5d4b39ef65f975cb1ce8cc478080b883c4ab7d9f2f4df4e1834c3cd00e2f968b",
+      "bytes": 1543
+    },
     "app/index.html": {
-      "sha256": "1b20578c8689b267f6ba9efb4bf7160879677a8678bfc0081118ca73ae6c671f",
+      "sha256": "2e0a11a9810af1510615249656f679acf927e5a89eb2b1e21195e93d375fb7a0",
       "bytes": 594163
     },
     "app/vendor/THREE-LICENSE.txt": {
@@ -57,8 +453,8 @@
       "bytes": 701356
     },
     "app/vessel-prep.html": {
-      "sha256": "d1bb66ce4bb3ed58e05c3780f4761a9c244674c619f1c504d3e6665eac86aa4f",
-      "bytes": 114692
+      "sha256": "e3f47d86acd11550b70428a91247e58e4de862954c0bded441879ef6f93803a8",
+      "bytes": 116784
     },
     "assets/fonts/FONT-LICENSES.txt": {
       "sha256": "c9971b94056e43c2301a97e13093d8b88e9d6a117058cd7307780b83a98bac4c",
@@ -105,8 +501,8 @@
       "bytes": 7065657
     },
     "assets/site.css": {
-      "sha256": "90119294ddf606255096e10b93a66f76946d4b7f1ba9acd86b40c8a7fba6604f",
-      "bytes": 30080
+      "sha256": "d737047830b5c6876f98969577a6e2db34f6f90724504ce25de24bc67717495e",
+      "bytes": 31086
     },
     "assets/story.js": {
       "sha256": "27c0c79658f74b60d612b81cf2bc61b2d9c3985ec9f9ce293986bf1ec1150c0d",
@@ -136,55 +532,59 @@
       "sha256": "18a2b9b28a81deeb988f9bf4377b05a98d4fa3ff10a1ceb4a266479799ca0365",
       "bytes": 2350
     },
+    "changelog.html": {
+      "sha256": "032e38e12e5e82fda82100da983e7e4a0e0b3d50349db28843a7287eeef4819b",
+      "bytes": 9551
+    },
     "community.html": {
-      "sha256": "7147ca80f366a8f8fd38f3e75564f41078fdddd097cf78b9266dd958d4efd26c",
-      "bytes": 6231
+      "sha256": "57e69909f6ac0bb16220a3c70dfcd7bb3998984c540e81fc0431aee0a1c4cb4f",
+      "bytes": 6355
     },
     "contact.html": {
-      "sha256": "a7691d884c89ad0d758fad1db87f5297b9dd161a36bc5711cedac7a796a8fd87",
-      "bytes": 4862
+      "sha256": "48e1613f051e88d6f5fa5518c5e311b6a10b7f49d3f1ace991adf0b3852e77c9",
+      "bytes": 4986
     },
     "favicon.svg": {
       "sha256": "c7734d95757ed800905d78d4b633e233455055796cb327e072ccf587c649d713",
       "bytes": 8082
     },
     "index.html": {
-      "sha256": "607f0bd27523047e8f29a6557d495fa5779985af984387ae29ebc5cff9d26192",
-      "bytes": 21503
+      "sha256": "644ed9804bc586ba2c0bd83e35fc79f2fe318523e0ea5e97581f1abbd0648422",
+      "bytes": 21961
     },
     "privacy.html": {
-      "sha256": "9ededcd6095b827bad363188ad9c18f7fcac66f543fd71847109122f476094fb",
-      "bytes": 9451
+      "sha256": "e271f9461f082b240012fd82aa37ff5edd65fd097e438e2f1b8aeaacc41baaa0",
+      "bytes": 9772
     },
     "robots.txt": {
       "sha256": "17f15a556bbe026640db462476659d39c78639a926c6cc93410b3ce3ad710878",
       "bytes": 39
     },
     "team.html": {
-      "sha256": "6ae0ba87d18c2146e684e40d4b6eaa466e3c30a38e48a950d3a2d92cdcc0f76e",
-      "bytes": 10642
+      "sha256": "9a230600e8f4707364ef4c18e62b832599bfbedbc7c885fea9426bbe838ff838",
+      "bytes": 10766
     },
     "terms.html": {
-      "sha256": "367322eda24f46e5526ad8051b850897ad861e430fe40f892102b561f3b9fb77",
-      "bytes": 10089
+      "sha256": "542d7b7a8906895a3f9c5fa0c914125a9d335a4c1dd091d72e67328d78fd9818",
+      "bytes": 10213
     },
     "zh/community.html": {
-      "sha256": "cd773f8662f2b0151cb202622a36c95d8a62b0f741d7e24da93eed2790506816",
-      "bytes": 6442
+      "sha256": "4a6e72cdbf2bd2608aa3ffbaa245db0c799ede6d9a6adb50d9825a7c60a6a764",
+      "bytes": 6584
     },
     "zh/contact.html": {
-      "sha256": "1f736aa07159e725be3c0e756bead4f57de74e282a528bf63fd2352cb0d06390",
-      "bytes": 5092
+      "sha256": "c336ec406c8749e6649cef2f02e1e8f814b65072a41cd0e370855f7f48cfbf9d",
+      "bytes": 5234
     },
     "zh/index.html": {
-      "sha256": "b8acac8780df6df7ab8ba52e890de91154cb17717632d900fa49bb21fd68eafb",
-      "bytes": 21834
+      "sha256": "5f0c63af00bf359b9465e79e33e5b575e436d3c92016d4988e6c2ef708cc2632",
+      "bytes": 22345
     },
     "zh/team.html": {
-      "sha256": "386908b7942addf8fb1019e942ba7cc558e02dd53f7df0d90baa41ea70349aef",
-      "bytes": 10537
+      "sha256": "f7ab91be2902fcc7e3c763bfa8918eded936a8bd141d283820309a9567a005f2",
+      "bytes": 10679
     }
   },
   "wrapper": "Public pages from pages/. App pages hardened by tools/harden.mjs: method panels and manuscript provenance replaced, code minified, comments removed.",
-  "scope": "Research beta. Not a medical device. No clinical, diagnostic or patient-risk claims. All geometry and results stay in the visitor's browser."
+  "scope": "Research beta. Not a medical device. No clinical, diagnostic or patient-risk claims. Scans, geometry and results stay in the visitor's browser unless they submit their work to the team."
 }
